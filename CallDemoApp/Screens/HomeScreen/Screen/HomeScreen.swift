@@ -23,12 +23,14 @@ struct HomeScreen: View {
                     VStack(spacing: 16) {
                         Button(callButtonTitle, systemImage: "phone.fill") { callViewModel.startCall()
                         }
+                        .accessibilityIdentifier("home.callButton")
                         .buttonStyle(.glassProminent)
                         .disabled(!callViewModel.canStartOutgoingCall)
                         
                         Button("Giả lập cuộc gọi đến", systemImage: "phone.arrow.down.left") {
                             callViewModel.receiveCall(from: "Alice")
                         }
+                        .accessibilityIdentifier("home.simulateIncomingButton")
                         .buttonStyle(.glass)
                         .disabled(!callViewModel.hasCurrentUserID)
                     }
@@ -50,6 +52,7 @@ struct HomeScreen: View {
                 Button("Settings", systemImage: "gearshape") {
                     isShowingSettings = true
                 }
+                .accessibilityIdentifier("home.settingsButton")
             }
         }
         .sheet(isPresented: $isShowingSettings) { viewFactory.makeSettingsView() }

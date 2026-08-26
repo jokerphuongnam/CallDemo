@@ -17,6 +17,7 @@ struct SettingsView: View {
             Form {
                 Section("Call identity") {
                     TextField("Current user ID", text: $viewModel.currentUserID)
+                        .accessibilityIdentifier("settings.currentUserIDField")
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     if showsCurrentUserIDPreview {
@@ -27,6 +28,7 @@ struct SettingsView: View {
 
                 Section("Outgoing partner") {
                     TextField("Partner user ID", text: $viewModel.partnerUserID)
+                        .accessibilityIdentifier("settings.partnerUserIDField")
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     if showsPartnerUserIDPreview {
@@ -46,6 +48,7 @@ struct SettingsView: View {
                         viewModel.save()
                         dismiss()
                     }
+                    .accessibilityIdentifier("settings.saveButton")
                     .disabled(!viewModel.canSave)
                 }
             }

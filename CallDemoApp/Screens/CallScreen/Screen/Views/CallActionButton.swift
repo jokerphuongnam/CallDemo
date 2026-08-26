@@ -18,5 +18,6 @@ struct CallActionButton: View {
             }
             .foregroundStyle(.white)
         }
+        .accessibilityIdentifier("call.\(systemImage == "phone.fill" ? "answerButton" : "endButton")")
     }
 }

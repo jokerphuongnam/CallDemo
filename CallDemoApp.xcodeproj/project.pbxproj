@@ -46,7 +46,18 @@
 		A80000000000000000000002 /* Bundle+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* Bundle+Configuration.swift */; };
 		A30000000000000000000005 /* DefaultAppViewFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */; };
 		A30000000000000000000006 /* Resolver+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000006 /* Resolver+Required.swift */; };
+		D90000000000000000000001 /* CallDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90000000000000000000002 /* CallDemoAppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90000000000000000000009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E9A8B7F37BD101A139284A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7EFA573B5075BEF522A17AC;
+			remoteInfo = CallDemoApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -87,8 +98,11 @@
 		B70000000000000000000002 /* Environment.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Environment.xcconfig.example; sourceTree = "<group>"; };
 		B80000000000000000000001 /* ConfigurationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKey.swift; sourceTree = "<group>"; };
 		B80000000000000000000002 /* Bundle+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Configuration.swift"; sourceTree = "<group>"; };
+		B80000000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppViewFactoryImpl.swift; sourceTree = "<group>"; };
 		B30000000000000000000006 /* Resolver+Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Required.swift"; sourceTree = "<group>"; };
+		D90000000000000000000002 /* CallDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDemoAppUITests.swift; sourceTree = "<group>"; };
+		D90000000000000000000003 /* CallDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,13 @@
 			files = (
 				A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */,
 				B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90000000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */,
+				D90000000000000000000003 /* CallDemoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,8 +280,17 @@
 			isa = PBXGroup;
 			children = (
 				756B3D9E3570C660BD0F847A /* CallDemoApp */,
+				D90000000000000000000004 /* CallDemoAppUITests */,
 				47B32A644BCE7D076818EC8C /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		D90000000000000000000004 /* CallDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D90000000000000000000002 /* CallDemoAppUITests.swift */,
+			);
+			path = CallDemoAppUITests;
 			sourceTree = "<group>";
 		};
 		C70000000000000000000001 /* Config */ = {
@@ -269,6 +300,7 @@
 				B70000000000000000000002 /* Environment.xcconfig.example */,
 				B80000000000000000000001 /* ConfigurationKey.swift */,
 				B80000000000000000000002 /* Bundle+Configuration.swift */,
+				B80000000000000000000003 /* Info.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -397,6 +429,26 @@
 			productReference = 736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D90000000000000000000008 /* CallDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */;
+			buildPhases = (
+				D90000000000000000000005 /* Sources */,
+				D90000000000000000000006 /* Frameworks */,
+				D90000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9000000000000000000000A /* PBXTargetDependency */,
+			);
+			name = CallDemoAppUITests;
+			packageProductDependencies = (
+			);
+			productName = CallDemoAppUITests;
+			productReference = D90000000000000000000003 /* CallDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -425,9 +477,20 @@
 			projectRoot = "";
 			targets = (
 				F7EFA573B5075BEF522A17AC /* CallDemoApp */,
+				D90000000000000000000008 /* CallDemoAppUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8E66145EDFC27D5F8DC9239 /* Sources */ = {
@@ -474,16 +537,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D90000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90000000000000000000001 /* CallDemoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D9000000000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
+			targetProxy = D90000000000000000000009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D9000000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = CallDemoApp;
+			};
+			name = Debug;
+		};
+		D9000000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = CallDemoApp;
+			};
+			name = Release;
+		};
 		21D31BB391420060DA64CBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CallDemoApp/Config/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,7 +675,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CallDemoApp/Config/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +748,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9000000000000000000000B /* Debug */,
+				D9000000000000000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

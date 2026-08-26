@@ -5,9 +5,11 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
     private let callManager: CallManagerProtocol
     private let userIDManager: UserIDManagerProtocol
 
-    init(repository: UserSettingsRepositoryProtocol,
-         callManager: CallManagerProtocol,
-         userIDManager: UserIDManagerProtocol) {
+    init(
+        repository: UserSettingsRepositoryProtocol,
+        callManager: CallManagerProtocol,
+        userIDManager: UserIDManagerProtocol
+    ) {
         self.repository = repository
         self.callManager = callManager
         self.userIDManager = userIDManager
@@ -18,7 +20,8 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
     }
 
     var canStartOutgoingCall: Bool {
-        hasCurrentUserID && !settings.partnerUserID.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        hasCurrentUserID
+            && !settings.partnerUserID.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
     var currentDisplayID: String {

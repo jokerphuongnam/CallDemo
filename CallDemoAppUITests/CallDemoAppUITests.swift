@@ -69,17 +69,19 @@ final class CallDemoAppUITests: XCTestCase {
         var didChangeStoredIDs = false
 
         if let currentUserID {
-            didChangeStoredIDs = fillTextIfEmpty(
-                in: app.textFields["settings.currentUserIDField"],
-                with: currentUserID
-            ) || didChangeStoredIDs
+            didChangeStoredIDs =
+                fillTextIfEmpty(
+                    in: app.textFields["settings.currentUserIDField"],
+                    with: currentUserID
+                ) || didChangeStoredIDs
         }
 
         if let partnerUserID {
-            didChangeStoredIDs = fillTextIfEmpty(
-                in: app.textFields["settings.partnerUserIDField"],
-                with: partnerUserID
-            ) || didChangeStoredIDs
+            didChangeStoredIDs =
+                fillTextIfEmpty(
+                    in: app.textFields["settings.partnerUserIDField"],
+                    with: partnerUserID
+                ) || didChangeStoredIDs
         }
 
         guard didChangeStoredIDs else {
@@ -100,7 +102,8 @@ final class CallDemoAppUITests: XCTestCase {
         let storedValue = (textField.value as? String)?
             .trimmingCharacters(in: .whitespacesAndNewlines)
 
-        let hasStoredValue = storedValue?.isEmpty == false
+        let hasStoredValue =
+            storedValue?.isEmpty == false
             && storedValue != textField.placeholderValue
 
         guard !hasStoredValue, !newValue.isEmpty else { return false }

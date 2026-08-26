@@ -33,7 +33,9 @@ final class SettingsViewModel {
 
     func save() {
         logger.info("[Settings] Save tapped")
-        useCase.saveSettings(UserSettings(currentUserID: currentUserID, partnerUserID: partnerUserID))
+        useCase.saveSettings(
+            UserSettings(currentUserID: currentUserID, partnerUserID: partnerUserID)
+        )
         logger.info("[Settings] Settings saved; partner configured: \(!partnerUserID.isEmpty)")
     }
 }

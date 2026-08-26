@@ -14,10 +14,12 @@ final class DefaultSettingsUseCaseImpl: SettingsUseCaseProtocol {
     }
 
     func saveSettings(_ settings: UserSettings) {
-        repository.saveSettings(UserSettings(
-            currentUserID: normalized(settings.currentUserID),
-            partnerUserID: normalized(settings.partnerUserID)
-        ))
+        repository.saveSettings(
+            UserSettings(
+                currentUserID: normalized(settings.currentUserID),
+                partnerUserID: normalized(settings.partnerUserID)
+            )
+        )
     }
 
     func signalingIDPreview(for input: String) -> String {

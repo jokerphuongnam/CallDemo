@@ -4,8 +4,10 @@ struct HomeCoordinatorScreen: View {
     @State private var coordinator: DefaultHomeCoordinatorImpl
     private let viewFactory: AppViewFactoryProtocol
 
-    init(coordinator: DefaultHomeCoordinatorImpl,
-         viewFactory: AppViewFactoryProtocol) {
+    init(
+        coordinator: DefaultHomeCoordinatorImpl,
+        viewFactory: AppViewFactoryProtocol
+    ) {
         self.coordinator = coordinator
         self.viewFactory = viewFactory
     }

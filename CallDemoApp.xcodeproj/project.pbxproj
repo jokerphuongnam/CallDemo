@@ -413,6 +413,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */;
 			buildPhases = (
+				E70000000000000000000001 /* SwiftLint */,
 				C8E66145EDFC27D5F8DC9239 /* Sources */,
 				87D23CE89DA5A2A612340C66 /* Frameworks */,
 			);
@@ -491,6 +492,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E70000000000000000000001 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftlint.yml",
+				"$(SRCROOT)/CallDemoApp",
+				"$(SRCROOT)/CallDemoAppUITests",
+				"$(SRCROOT)/Scripts/swiftlint.sh",
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/Scripts/swiftlint.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8E66145EDFC27D5F8DC9239 /* Sources */ = {

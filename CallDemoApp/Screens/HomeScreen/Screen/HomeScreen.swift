@@ -4,29 +4,33 @@ struct HomeScreen: View {
     @State private var callViewModel: CallViewModel
     private let viewFactory: AppViewFactoryProtocol
     @State private var isShowingSettings = false
-    
+
     init(callViewModel: CallViewModel, viewFactory: AppViewFactoryProtocol) {
         self.callViewModel = callViewModel
         self.viewFactory = viewFactory
     }
-    
+
     var body: some View {
         ZStack {
-            LinearGradient(colors: [.blue.opacity(0.65), .indigo, .black],
-                           startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(
+                colors: [.blue.opacity(0.65), .indigo, .black],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
             .ignoresSafeArea()
-            
+
             VStack(spacing: 28) {
                 Text("Call Demo").font(.largeTitle.bold())
                 Text(callViewModel.statusText).foregroundStyle(.secondary)
                 GlassEffectContainer(spacing: 16) {
                     VStack(spacing: 16) {
-                        Button(callButtonTitle, systemImage: "phone.fill") { callViewModel.startCall()
+                        Button(callButtonTitle, systemImage: "phone.fill") {
+                            callViewModel.startCall()
                         }
                         .accessibilityIdentifier("home.callButton")
                         .buttonStyle(.glassProminent)
                         .disabled(!callViewModel.canStartOutgoingCall)
-                        
+
                         Button("Giả lập cuộc gọi đến", systemImage: "phone.arrow.down.left") {
                             callViewModel.receiveCall(from: "Alice")
                         }
@@ -56,7 +60,7 @@ struct HomeScreen: View {
             }
         }
         .sheet(isPresented: $isShowingSettings) { viewFactory.makeSettingsView() }
-        .fullScreenCover(item: $callViewModel.activeCall) { call in
+        .fullScreenCover(item: $callViewModel.activeCall) { _ in
             viewFactory.makeCallScreen(
                 for: $callViewModel.activeCall,
                 onAnswer: callViewModel.answerCall,
@@ -64,8 +68,9 @@ struct HomeScreen: View {
             )
         }
     }
-    
+
     private var callButtonTitle: String {
-        callViewModel.canStartOutgoingCall ? "Call \(callViewModel.partnerDisplayUserID)" : "Nhập Partner ID"
+        callViewModel.canStartOutgoingCall
+            ? "Call \(callViewModel.partnerDisplayUserID)" : "Nhập Partner ID"
     }
 }

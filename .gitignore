@@ -2,6 +2,7 @@
 xcuserdata/
 DerivedData/
 .ui-test-artifacts/
+.agents/
 *.xcuserstate
 
 # Local environment configuration

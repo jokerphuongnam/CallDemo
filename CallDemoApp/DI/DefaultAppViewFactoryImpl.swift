@@ -1,5 +1,5 @@
-import Swinject
 import SwiftUI
+import Swinject
 
 @MainActor
 final class DefaultAppViewFactoryImpl: AppViewFactoryProtocol {
@@ -24,14 +24,14 @@ final class DefaultAppViewFactoryImpl: AppViewFactoryProtocol {
     }
 
     func makeSettingsView() -> SettingsView {
-        SettingsView(
-            viewModel: resolver.resolveRequired(SettingsViewModel.self)
-        )
+        SettingsView(viewModel: resolver.resolveRequired(SettingsViewModel.self))
     }
 
-    func makeCallScreen(for call: Binding<ActiveCall?>,
-                        onAnswer: @escaping () -> Void,
-                        onEnd: @escaping () -> Void) -> CallScreen {
+    func makeCallScreen(
+        for call: Binding<ActiveCall?>,
+        onAnswer: @escaping () -> Void,
+        onEnd: @escaping () -> Void
+    ) -> CallScreen {
         CallScreen(
             call: call,
             onAnswer: onAnswer,

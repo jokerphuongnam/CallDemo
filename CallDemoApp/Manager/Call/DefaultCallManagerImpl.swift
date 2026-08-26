@@ -11,7 +11,7 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
             phase: .connecting
         )
     }
-    
+
     func receiveCall(
         for localUserID: String,
         from peerName: String
@@ -23,7 +23,7 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
             phase: .ringing
         )
     }
-    
+
     func answer(
         _ call: ActiveCall
     ) -> ActiveCall {
@@ -31,8 +31,6 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
         connectedCall.phase = .connected
         return connectedCall
     }
-    
-    func endCall() {
-        
-    }
+
+    func endCall() {}
 }

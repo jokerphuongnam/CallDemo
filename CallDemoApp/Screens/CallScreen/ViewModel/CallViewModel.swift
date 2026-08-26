@@ -26,17 +26,21 @@ final class CallViewModel {
     func startCall() {
         logger.info("[Call] Start call tapped")
         activeCall = useCase.startOutgoingCall()
-        logger.info(activeCall == nil
-                    ? "[Call] Start call rejected: missing current or partner ID"
-                    : "[Call] Outgoing call created")
+        logger.info(
+            activeCall == nil
+                ? "[Call] Start call rejected: missing current or partner ID"
+                : "[Call] Outgoing call created"
+        )
     }
 
     func receiveCall(from peerName: String) {
         logger.info("[Call] Simulate incoming call tapped")
         activeCall = useCase.makeIncomingCall(from: peerName)
-        logger.info(activeCall == nil
-                    ? "[Call] Incoming call rejected: missing current ID"
-                    : "[Call] Incoming call created from \(peerName)")
+        logger.info(
+            activeCall == nil
+                ? "[Call] Incoming call rejected: missing current ID"
+                : "[Call] Incoming call created from \(peerName)"
+        )
     }
 
     func answerCall() {

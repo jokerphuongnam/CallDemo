@@ -14,9 +14,11 @@ final class DefaultUserSettingsRepositoryImpl: UserSettingsRepositoryProtocol {
     }
 
     func saveSettings(_ settings: UserSettings) {
-        storage.save(UserSettingsStorageModel(
-            currentUserID: settings.currentUserID,
-            partnerUserID: settings.partnerUserID
-        ))
+        storage.save(
+            UserSettingsStorageModel(
+                currentUserID: settings.currentUserID,
+                partnerUserID: settings.partnerUserID
+            )
+        )
     }
 }

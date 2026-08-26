@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03420A3A6F0B859160178849 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */; };
+		139DC4ACC6577366658FF931 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE73D1CE7380570B1F8956B /* UserSettings.swift */; };
+		2BB9161E2FD4BD99E1AD834F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277FC02BB919142328CF16C /* AppDelegate.swift */; };
+		4A11517E8D0404DDD83E16B3 /* UserIDManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17669BD341892C5634410056 /* UserIDManagerProtocol.swift */; };
+		583895D682D33DFE04909EE5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */; };
+		842405F47D52B44767B234A4 /* ActiveCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144FD1BC53C6325CF6CA8D8 /* ActiveCall.swift */; };
+		A20000000000000000000001 /* CallDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* CallDirection.swift */; };
+		A20000000000000000000002 /* CallPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* CallPhase.swift */; };
+		9550F807A6578A4F2260DD10 /* UserSettingsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */; };
+		965A5246EBF8963FBAAE9D08 /* UserSettingsStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72700AF36F63E9A1B79286 /* UserSettingsStorageModel.swift */; };
+		977265448EE031900561F84E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302C2050255653356DBC3D3 /* SettingsViewModel.swift */; };
+		9A8FD650517EAE3F17C9F2EF /* CallManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */; };
+		A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 76435CAB8F8C75EC8EAF60E5 /* Swinject */; };
+		B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 218F0910D4F9435A442648B4 /* SwinjectAutoregistration */; };
+		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
+		A40000000000000000000001 /* CallActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000001 /* CallActionButton.swift */; };
+		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
+		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
+		A10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */; };
+		CD46632CC70C8E4361694CF3 /* UserSettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */; };
+		CFA90B1106FC79A455306828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4FF5264B28AD1E889920A /* AppContainer.swift */; };
+		E9C548C7E4A7DF7241488652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */; };
+		EA9BE45210BAC0918B8585C3 /* CallUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */; };
+		A10000000000000000000002 /* DefaultCallUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */; };
+		F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D294D68CEF1E2C731A809B /* HomeScreen.swift */; };
+		A50000000000000000000001 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000001 /* HomeCoordinatorProtocol.swift */; };
+		A50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */; };
+		A50000000000000000000003 /* HomeCoordinatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000003 /* HomeCoordinatorScreen.swift */; };
+		FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */; };
+		A30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift */; };
+		A30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */; };
+		A30000000000000000000003 /* DefaultCallManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* DefaultCallManagerImpl.swift */; };
+		A30000000000000000000004 /* DefaultUserIDManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000004 /* DefaultUserIDManagerImpl.swift */; };
+		A60000000000000000000001 /* AppLoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000001 /* AppLoggerProtocol.swift */; };
+		A60000000000000000000002 /* DefaultAppLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000002 /* DefaultAppLoggerImpl.swift */; };
+		A80000000000000000000001 /* ConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000001 /* ConfigurationKey.swift */; };
+		A80000000000000000000002 /* Bundle+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* Bundle+Configuration.swift */; };
+		A30000000000000000000005 /* DefaultAppViewFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */; };
+		A30000000000000000000006 /* Resolver+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000006 /* Resolver+Required.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		B50000000000000000000001 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeCoordinatorImpl.swift; sourceTree = "<group>"; };
+		B50000000000000000000003 /* HomeCoordinatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorScreen.swift; sourceTree = "<group>"; };
+		17669BD341892C5634410056 /* UserIDManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManagerProtocol.swift; sourceTree = "<group>"; };
+		1CE73D1CE7380570B1F8956B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2144FD1BC53C6325CF6CA8D8 /* ActiveCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCall.swift; sourceTree = "<group>"; };
+		B20000000000000000000001 /* CallDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* CallPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhase.swift; sourceTree = "<group>"; };
+		407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewFactoryProtocol.swift; sourceTree = "<group>"; };
+		4C72700AF36F63E9A1B79286 /* UserSettingsStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsStorageModel.swift; sourceTree = "<group>"; };
+		5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingsUseCaseImpl.swift; sourceTree = "<group>"; };
+		613A0527229418DF7B11DA0C /* CallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallScreen.swift; sourceTree = "<group>"; };
+		B40000000000000000000001 /* CallActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButton.swift; sourceTree = "<group>"; };
+		6302C2050255653356DBC3D3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDemoApp.swift; sourceTree = "<group>"; };
+		736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CallDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUseCaseProtocol.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseImpl.swift; sourceTree = "<group>"; };
+		8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsStorageProtocol.swift; sourceTree = "<group>"; };
+		90E4FF5264B28AD1E889920A /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManagerProtocol.swift; sourceTree = "<group>"; };
+		D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
+		E277FC02BB919142328CF16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserSettingsStorageImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserSettingsRepositoryImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000003 /* DefaultCallManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallManagerImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000004 /* DefaultUserIDManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserIDManagerImpl.swift; sourceTree = "<group>"; };
+		B60000000000000000000001 /* AppLoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoggerProtocol.swift; sourceTree = "<group>"; };
+		B60000000000000000000002 /* DefaultAppLoggerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppLoggerImpl.swift; sourceTree = "<group>"; };
+		B70000000000000000000001 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		B70000000000000000000002 /* Environment.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Environment.xcconfig.example; sourceTree = "<group>"; };
+		B80000000000000000000001 /* ConfigurationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKey.swift; sourceTree = "<group>"; };
+		B80000000000000000000002 /* Bundle+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Configuration.swift"; sourceTree = "<group>"; };
+		B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppViewFactoryImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000006 /* Resolver+Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Required.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87D23CE89DA5A2A612340C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */,
+				B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06FC75A51C87C52E292C08B5 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C50000000000000000000001 /* Coordinator */,
+				80B826A11117F20DBD662AA4 /* Screen */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		C50000000000000000000001 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B50000000000000000000001 /* HomeCoordinatorProtocol.swift */,
+				B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1802848D241A4C7723D0720E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E277FC02BB919142328CF16C /* AppDelegate.swift */,
+				6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */,
+				2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1A05194D2EE2FF659922294E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */,
+				B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1A53F391377FE3B1E0414FD4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				23D40762B5F20661303988FE /* UserDefaults */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		23D40762B5F20661303988FE /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */,
+				B30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift */,
+				BADDDD5DE541D95D53FBFDF6 /* Model */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		243EA3AB64F9F9DCA2AAAAC0 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */,
+				B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2B62B2F55C907E01D6C0A8B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F14853A6BAAEA52EB3526BF /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				613A0527229418DF7B11DA0C /* CallScreen.swift */,
+				C40000000000000000000001 /* Views */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C40000000000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B40000000000000000000001 /* CallActionButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47B32A644BCE7D076818EC8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50A11B61641927C97013E9D2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				90E4FF5264B28AD1E889920A /* AppContainer.swift */,
+				407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */,
+				B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */,
+				B30000000000000000000006 /* Resolver+Required.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		5FEBB511EB86758EC150CD20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2144FD1BC53C6325CF6CA8D8 /* ActiveCall.swift */,
+				B20000000000000000000001 /* CallDirection.swift */,
+				B20000000000000000000002 /* CallPhase.swift */,
+				1CE73D1CE7380570B1F8956B /* UserSettings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6343C021C4655310C77AAAE8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		756B3D9E3570C660BD0F847A /* CallDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				1802848D241A4C7723D0720E /* App */,
+				C70000000000000000000001 /* Config */,
+				DF97E2DF024E01766EA9EC03 /* Data */,
+				50A11B61641927C97013E9D2 /* DI */,
+				A4BE10EF7037448EC7D4EDC0 /* Manager */,
+				1A05194D2EE2FF659922294E /* Repositories */,
+				EFB221D5FAECABB18C5BF0F7 /* Screens */,
+			);
+			path = CallDemoApp;
+			sourceTree = "<group>";
+		};
+		80B826A11117F20DBD662AA4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				14D294D68CEF1E2C731A809B /* HomeScreen.swift */,
+				B50000000000000000000003 /* HomeCoordinatorScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		867035C05721A35413F6ED07 = {
+			isa = PBXGroup;
+			children = (
+				756B3D9E3570C660BD0F847A /* CallDemoApp */,
+				47B32A644BCE7D076818EC8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C70000000000000000000001 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B70000000000000000000001 /* Base.xcconfig */,
+				B70000000000000000000002 /* Environment.xcconfig.example */,
+				B80000000000000000000001 /* ConfigurationKey.swift */,
+				B80000000000000000000002 /* Bundle+Configuration.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9F758C7F3D26C2259178F428 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6343C021C4655310C77AAAE8 /* Screen */,
+				243EA3AB64F9F9DCA2AAAAC0 /* UseCase */,
+				F769CEFC3226A77E16862287 /* ViewModel */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		A4BE10EF7037448EC7D4EDC0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E08FA41E7C030D65821CC290 /* Call */,
+				BCE87EC91D18F9317B34648A /* Identity */,
+				C60000000000000000000001 /* Logging */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C60000000000000000000001 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				B60000000000000000000001 /* AppLoggerProtocol.swift */,
+				B60000000000000000000002 /* DefaultAppLoggerImpl.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		BADDDD5DE541D95D53FBFDF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C72700AF36F63E9A1B79286 /* UserSettingsStorageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE87EC91D18F9317B34648A /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				17669BD341892C5634410056 /* UserIDManagerProtocol.swift */,
+				B30000000000000000000004 /* DefaultUserIDManagerImpl.swift */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		D5924F8D6C223BA141E07A1F /* CallScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F14853A6BAAEA52EB3526BF /* Screen */,
+				E3C1814D327ABC35C773206A /* UseCase */,
+				2B62B2F55C907E01D6C0A8B9 /* ViewModel */,
+			);
+			path = CallScreen;
+			sourceTree = "<group>";
+		};
+		DF97E2DF024E01766EA9EC03 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5FEBB511EB86758EC150CD20 /* Model */,
+				1A53F391377FE3B1E0414FD4 /* Storage */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E08FA41E7C030D65821CC290 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */,
+				B30000000000000000000003 /* DefaultCallManagerImpl.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		E3C1814D327ABC35C773206A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */,
+				B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EFB221D5FAECABB18C5BF0F7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D5924F8D6C223BA141E07A1F /* CallScreen */,
+				06FC75A51C87C52E292C08B5 /* HomeScreen */,
+				9F758C7F3D26C2259178F428 /* SettingsScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F769CEFC3226A77E16862287 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6302C2050255653356DBC3D3 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7EFA573B5075BEF522A17AC /* CallDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */;
+			buildPhases = (
+				C8E66145EDFC27D5F8DC9239 /* Sources */,
+				87D23CE89DA5A2A612340C66 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallDemoApp;
+			packageProductDependencies = (
+				76435CAB8F8C75EC8EAF60E5 /* Swinject */,
+				218F0910D4F9435A442648B4 /* SwinjectAutoregistration */,
+			);
+			productName = CallDemoApp;
+			productReference = 736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E9A8B7F37BD101A139284A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 883D8B47455B5B6828B74F11 /* Build configuration list for PBXProject "CallDemoApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 867035C05721A35413F6ED07;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */,
+				5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 47B32A644BCE7D076818EC8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7EFA573B5075BEF522A17AC /* CallDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8E66145EDFC27D5F8DC9239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842405F47D52B44767B234A4 /* ActiveCall.swift in Sources */,
+				A20000000000000000000001 /* CallDirection.swift in Sources */,
+				A20000000000000000000002 /* CallPhase.swift in Sources */,
+				CFA90B1106FC79A455306828 /* AppContainer.swift in Sources */,
+				2BB9161E2FD4BD99E1AD834F /* AppDelegate.swift in Sources */,
+				FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */,
+				A30000000000000000000005 /* DefaultAppViewFactoryImpl.swift in Sources */,
+				A30000000000000000000006 /* Resolver+Required.swift in Sources */,
+				C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */,
+				9A8FD650517EAE3F17C9F2EF /* CallManagerProtocol.swift in Sources */,
+				A30000000000000000000003 /* DefaultCallManagerImpl.swift in Sources */,
+				C0466D5331A29753925896FD /* CallScreen.swift in Sources */,
+				A40000000000000000000001 /* CallActionButton.swift in Sources */,
+				EA9BE45210BAC0918B8585C3 /* CallUseCaseProtocol.swift in Sources */,
+				A10000000000000000000002 /* DefaultCallUseCaseImpl.swift in Sources */,
+				03420A3A6F0B859160178849 /* CallViewModel.swift in Sources */,
+				F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */,
+				A50000000000000000000001 /* HomeCoordinatorProtocol.swift in Sources */,
+				A50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift in Sources */,
+				A50000000000000000000003 /* HomeCoordinatorScreen.swift in Sources */,
+				E9C548C7E4A7DF7241488652 /* SceneDelegate.swift in Sources */,
+				C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */,
+				A10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift in Sources */,
+				583895D682D33DFE04909EE5 /* SettingsView.swift in Sources */,
+				977265448EE031900561F84E /* SettingsViewModel.swift in Sources */,
+				CD46632CC70C8E4361694CF3 /* UserSettingsStorageProtocol.swift in Sources */,
+				A30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift in Sources */,
+				4A11517E8D0404DDD83E16B3 /* UserIDManagerProtocol.swift in Sources */,
+				A30000000000000000000004 /* DefaultUserIDManagerImpl.swift in Sources */,
+				A60000000000000000000001 /* AppLoggerProtocol.swift in Sources */,
+				A60000000000000000000002 /* DefaultAppLoggerImpl.swift in Sources */,
+				A80000000000000000000001 /* ConfigurationKey.swift in Sources */,
+				A80000000000000000000002 /* Bundle+Configuration.swift in Sources */,
+				139DC4ACC6577366658FF931 /* UserSettings.swift in Sources */,
+				9550F807A6578A4F2260DD10 /* UserSettingsRepositoryProtocol.swift in Sources */,
+				A30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift in Sources */,
+				965A5246EBF8963FBAAE9D08 /* UserSettingsStorageModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		21D31BB391420060DA64CBD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2BEFE23624CA45D209556EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A6E0644181629865F58AA438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F901A6AAB2B444A7431FB269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D31BB391420060DA64CBD3 /* Debug */,
+				A6E0644181629865F58AA438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		883D8B47455B5B6828B74F11 /* Build configuration list for PBXProject "CallDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEFE23624CA45D209556EA1 /* Debug */,
+				F901A6AAB2B444A7431FB269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		218F0910D4F9435A442648B4 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		76435CAB8F8C75EC8EAF60E5 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4E9A8B7F37BD101A139284A9 /* Project object */;
+}

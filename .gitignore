@@ -1,0 +1,7 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+*.xcuserstate
+
+# Local environment configuration
+CallDemoApp/Config/Environment.xcconfig

@@ -27,15 +27,17 @@ struct CallScreen: View {
                         .foregroundStyle(.white)
                     Text(callStatus)
                         .foregroundStyle(.white.opacity(0.7))
+                        .accessibilityIdentifier("call.statusText")
                     Spacer()
 
                     GlassEffectContainer(spacing: 56) {
                         HStack(spacing: 56) {
-                            if call.direction == .incoming && call.phase == .ringing {
+                            if call.direction == .incoming {
                                 CallActionButton(
                                     title: "Nhận",
                                     systemImage: "phone.fill",
                                     color: .green,
+                                    isEnabled: call.phase == .ringing,
                                     action: onAnswer
                                 )
                             }
@@ -55,8 +57,10 @@ struct CallScreen: View {
 
     private var callStatus: String {
         switch call?.phase {
-        case .ringing: "Cuộc gọi đến"
-        case .connecting: "Đang gọi…"
+        case .waitingForPeer: "Đang kết nối signaling…"
+        case .ringing:
+            call?.direction == .incoming ? "Cuộc gọi đến" : "Đang đổ chuông…"
+        case .connecting: "Đang kết nối WebRTC…"
         case .connected: "Đã kết nối"
         case .none: ""
         }

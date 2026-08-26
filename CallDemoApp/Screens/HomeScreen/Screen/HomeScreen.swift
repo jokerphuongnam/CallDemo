@@ -30,13 +30,15 @@ struct HomeScreen: View {
                         .accessibilityIdentifier("home.callButton")
                         .buttonStyle(.glassProminent)
                         .disabled(!callViewModel.canStartOutgoingCall)
+                        .animation(.smooth, value: callViewModel.canStartOutgoingCall)
 
                         Button("Giả lập cuộc gọi đến", systemImage: "phone.arrow.down.left") {
-                            callViewModel.receiveCall(from: "Alice")
+                            callViewModel.receiveCall()
                         }
                         .accessibilityIdentifier("home.simulateIncomingButton")
                         .buttonStyle(.glass)
                         .disabled(!callViewModel.hasCurrentUserID)
+                        .animation(.smooth, value: callViewModel.hasCurrentUserID)
                     }
                 }
             }

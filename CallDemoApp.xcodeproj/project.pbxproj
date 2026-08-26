@@ -13,40 +13,44 @@
 		4A11517E8D0404DDD83E16B3 /* UserIDManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17669BD341892C5634410056 /* UserIDManagerProtocol.swift */; };
 		583895D682D33DFE04909EE5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */; };
 		842405F47D52B44767B234A4 /* ActiveCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144FD1BC53C6325CF6CA8D8 /* ActiveCall.swift */; };
-		A20000000000000000000001 /* CallDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* CallDirection.swift */; };
-		A20000000000000000000002 /* CallPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* CallPhase.swift */; };
 		9550F807A6578A4F2260DD10 /* UserSettingsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */; };
 		965A5246EBF8963FBAAE9D08 /* UserSettingsStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72700AF36F63E9A1B79286 /* UserSettingsStorageModel.swift */; };
 		977265448EE031900561F84E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6302C2050255653356DBC3D3 /* SettingsViewModel.swift */; };
 		9A8FD650517EAE3F17C9F2EF /* CallManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */; };
-		A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 76435CAB8F8C75EC8EAF60E5 /* Swinject */; };
-		B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 218F0910D4F9435A442648B4 /* SwinjectAutoregistration */; };
-		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
-		A40000000000000000000001 /* CallActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000001 /* CallActionButton.swift */; };
-		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
-		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
 		A10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */; };
-		CD46632CC70C8E4361694CF3 /* UserSettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */; };
-		CFA90B1106FC79A455306828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4FF5264B28AD1E889920A /* AppContainer.swift */; };
-		E9C548C7E4A7DF7241488652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */; };
-		EA9BE45210BAC0918B8585C3 /* CallUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */; };
 		A10000000000000000000002 /* DefaultCallUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */; };
-		F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D294D68CEF1E2C731A809B /* HomeScreen.swift */; };
-		A50000000000000000000001 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000001 /* HomeCoordinatorProtocol.swift */; };
-		A50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */; };
-		A50000000000000000000003 /* HomeCoordinatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000003 /* HomeCoordinatorScreen.swift */; };
-		FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */; };
+		A20000000000000000000001 /* CallDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* CallDirection.swift */; };
+		A20000000000000000000002 /* CallPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* CallPhase.swift */; };
 		A30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift */; };
 		A30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */; };
 		A30000000000000000000003 /* DefaultCallManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* DefaultCallManagerImpl.swift */; };
 		A30000000000000000000004 /* DefaultUserIDManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000004 /* DefaultUserIDManagerImpl.swift */; };
+		A30000000000000000000005 /* DefaultAppViewFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */; };
+		A30000000000000000000006 /* Resolver+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000006 /* Resolver+Required.swift */; };
+		A40000000000000000000001 /* CallActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000001 /* CallActionButton.swift */; };
+		A50000000000000000000001 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000001 /* HomeCoordinatorProtocol.swift */; };
+		A50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */; };
+		A50000000000000000000003 /* HomeCoordinatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000003 /* HomeCoordinatorScreen.swift */; };
+		A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 76435CAB8F8C75EC8EAF60E5 /* Swinject */; };
 		A60000000000000000000001 /* AppLoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000001 /* AppLoggerProtocol.swift */; };
 		A60000000000000000000002 /* DefaultAppLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000002 /* DefaultAppLoggerImpl.swift */; };
 		A80000000000000000000001 /* ConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000001 /* ConfigurationKey.swift */; };
 		A80000000000000000000002 /* Bundle+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* Bundle+Configuration.swift */; };
-		A30000000000000000000005 /* DefaultAppViewFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */; };
-		A30000000000000000000006 /* Resolver+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000006 /* Resolver+Required.swift */; };
-		D90000000000000000000001 /* CallDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90000000000000000000002 /* CallDemoAppUITests.swift */; };
+		B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 218F0910D4F9435A442648B4 /* SwinjectAutoregistration */; };
+		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
+		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
+		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
+		CD46632CC70C8E4361694CF3 /* UserSettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */; };
+		CFA90B1106FC79A455306828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4FF5264B28AD1E889920A /* AppContainer.swift */; };
+		D91000000000000000000001 /* CallDemoAppUITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000001 /* CallDemoAppUITestCase.swift */; };
+		D91000000000000000000002 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000002 /* SettingsUITests.swift */; };
+		D91000000000000000000003 /* CallStateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000003 /* CallStateUITests.swift */; };
+		D91000000000000000000004 /* CallCancellationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000004 /* CallCancellationUITests.swift */; };
+		D91000000000000000000005 /* ManualCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000005 /* ManualCallUITests.swift */; };
+		E9C548C7E4A7DF7241488652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */; };
+		EA9BE45210BAC0918B8585C3 /* CallUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */; };
+		F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D294D68CEF1E2C731A809B /* HomeScreen.swift */; };
+		FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,37 +65,34 @@
 
 /* Begin PBXFileReference section */
 		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		B50000000000000000000001 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeCoordinatorImpl.swift; sourceTree = "<group>"; };
-		B50000000000000000000003 /* HomeCoordinatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorScreen.swift; sourceTree = "<group>"; };
 		17669BD341892C5634410056 /* UserIDManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManagerProtocol.swift; sourceTree = "<group>"; };
 		1CE73D1CE7380570B1F8956B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2144FD1BC53C6325CF6CA8D8 /* ActiveCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCall.swift; sourceTree = "<group>"; };
-		B20000000000000000000001 /* CallDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
-		B20000000000000000000002 /* CallPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhase.swift; sourceTree = "<group>"; };
 		407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewFactoryProtocol.swift; sourceTree = "<group>"; };
 		4C72700AF36F63E9A1B79286 /* UserSettingsStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsStorageModel.swift; sourceTree = "<group>"; };
 		5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUseCaseProtocol.swift; sourceTree = "<group>"; };
-		B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingsUseCaseImpl.swift; sourceTree = "<group>"; };
 		613A0527229418DF7B11DA0C /* CallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallScreen.swift; sourceTree = "<group>"; };
-		B40000000000000000000001 /* CallActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButton.swift; sourceTree = "<group>"; };
 		6302C2050255653356DBC3D3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDemoApp.swift; sourceTree = "<group>"; };
-		736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CallDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUseCaseProtocol.swift; sourceTree = "<group>"; };
-		B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseImpl.swift; sourceTree = "<group>"; };
 		8D314C62506029E79E8220EC /* UserSettingsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsStorageProtocol.swift; sourceTree = "<group>"; };
 		90E4FF5264B28AD1E889920A /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManagerProtocol.swift; sourceTree = "<group>"; };
-		D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
-		E277FC02BB919142328CF16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B10000000000000000000001 /* DefaultSettingsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingsUseCaseImpl.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseImpl.swift; sourceTree = "<group>"; };
+		B20000000000000000000001 /* CallDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* CallPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhase.swift; sourceTree = "<group>"; };
 		B30000000000000000000001 /* DefaultUserSettingsStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserSettingsStorageImpl.swift; sourceTree = "<group>"; };
 		B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserSettingsRepositoryImpl.swift; sourceTree = "<group>"; };
 		B30000000000000000000003 /* DefaultCallManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallManagerImpl.swift; sourceTree = "<group>"; };
 		B30000000000000000000004 /* DefaultUserIDManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserIDManagerImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppViewFactoryImpl.swift; sourceTree = "<group>"; };
+		B30000000000000000000006 /* Resolver+Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Required.swift"; sourceTree = "<group>"; };
+		B40000000000000000000001 /* CallActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButton.swift; sourceTree = "<group>"; };
+		B50000000000000000000001 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeCoordinatorImpl.swift; sourceTree = "<group>"; };
+		B50000000000000000000003 /* HomeCoordinatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorScreen.swift; sourceTree = "<group>"; };
 		B60000000000000000000001 /* AppLoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoggerProtocol.swift; sourceTree = "<group>"; };
 		B60000000000000000000002 /* DefaultAppLoggerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppLoggerImpl.swift; sourceTree = "<group>"; };
 		B70000000000000000000001 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
@@ -99,10 +100,17 @@
 		B80000000000000000000001 /* ConfigurationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKey.swift; sourceTree = "<group>"; };
 		B80000000000000000000002 /* Bundle+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Configuration.swift"; sourceTree = "<group>"; };
 		B80000000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B30000000000000000000005 /* DefaultAppViewFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppViewFactoryImpl.swift; sourceTree = "<group>"; };
-		B30000000000000000000006 /* Resolver+Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Required.swift"; sourceTree = "<group>"; };
-		D90000000000000000000002 /* CallDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDemoAppUITests.swift; sourceTree = "<group>"; };
+		CB4F859E56A92E5A0C4EE34E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManagerProtocol.swift; sourceTree = "<group>"; };
+		D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
 		D90000000000000000000003 /* CallDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92000000000000000000001 /* CallDemoAppUITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDemoAppUITestCase.swift; sourceTree = "<group>"; };
+		D92000000000000000000002 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
+		D92000000000000000000003 /* CallStateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStateUITests.swift; sourceTree = "<group>"; };
+		D92000000000000000000004 /* CallCancellationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCancellationUITests.swift; sourceTree = "<group>"; };
+		D92000000000000000000005 /* ManualCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCallUITests.swift; sourceTree = "<group>"; };
+		E277FC02BB919142328CF16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +140,6 @@
 				80B826A11117F20DBD662AA4 /* Screen */,
 			);
 			path = HomeScreen;
-			sourceTree = "<group>";
-		};
-		C50000000000000000000001 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				B50000000000000000000001 /* HomeCoordinatorProtocol.swift */,
-				B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		1802848D241A4C7723D0720E /* App */ = {
@@ -204,14 +203,6 @@
 				C40000000000000000000001 /* Views */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		C40000000000000000000001 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B40000000000000000000001 /* CallActionButton.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		47B32A644BCE7D076818EC8C /* Products */ = {
@@ -285,26 +276,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		D90000000000000000000004 /* CallDemoAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D90000000000000000000002 /* CallDemoAppUITests.swift */,
-			);
-			path = CallDemoAppUITests;
-			sourceTree = "<group>";
-		};
-		C70000000000000000000001 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				B70000000000000000000001 /* Base.xcconfig */,
-				B70000000000000000000002 /* Environment.xcconfig.example */,
-				B80000000000000000000001 /* ConfigurationKey.swift */,
-				B80000000000000000000002 /* Bundle+Configuration.swift */,
-				B80000000000000000000003 /* Info.plist */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		9F758C7F3D26C2259178F428 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,15 +296,6 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		C60000000000000000000001 /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				B60000000000000000000001 /* AppLoggerProtocol.swift */,
-				B60000000000000000000002 /* DefaultAppLoggerImpl.swift */,
-			);
-			path = Logging;
-			sourceTree = "<group>";
-		};
 		BADDDD5DE541D95D53FBFDF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +313,44 @@
 			path = Identity;
 			sourceTree = "<group>";
 		};
+		C40000000000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B40000000000000000000001 /* CallActionButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C50000000000000000000001 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B50000000000000000000001 /* HomeCoordinatorProtocol.swift */,
+				B50000000000000000000002 /* DefaultHomeCoordinatorImpl.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C60000000000000000000001 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				B60000000000000000000001 /* AppLoggerProtocol.swift */,
+				B60000000000000000000002 /* DefaultAppLoggerImpl.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		C70000000000000000000001 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B70000000000000000000001 /* Base.xcconfig */,
+				B70000000000000000000002 /* Environment.xcconfig.example */,
+				B80000000000000000000001 /* ConfigurationKey.swift */,
+				B80000000000000000000002 /* Bundle+Configuration.swift */,
+				B80000000000000000000003 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		D5924F8D6C223BA141E07A1F /* CallScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +359,42 @@
 				2B62B2F55C907E01D6C0A8B9 /* ViewModel */,
 			);
 			path = CallScreen;
+			sourceTree = "<group>";
+		};
+		D90000000000000000000004 /* CallDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D93000000000000000000001 /* Call */,
+				D93000000000000000000002 /* Settings */,
+				D93000000000000000000003 /* Support */,
+			);
+			path = CallDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		D93000000000000000000001 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				D92000000000000000000004 /* CallCancellationUITests.swift */,
+				D92000000000000000000003 /* CallStateUITests.swift */,
+				D92000000000000000000005 /* ManualCallUITests.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		D93000000000000000000002 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D92000000000000000000002 /* SettingsUITests.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D93000000000000000000003 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D92000000000000000000001 /* CallDemoAppUITestCase.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		DF97E2DF024E01766EA9EC03 /* Data */ = {
@@ -409,6 +445,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D90000000000000000000008 /* CallDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */;
+			buildPhases = (
+				D90000000000000000000005 /* Sources */,
+				D90000000000000000000006 /* Frameworks */,
+				D90000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9000000000000000000000A /* PBXTargetDependency */,
+			);
+			name = CallDemoAppUITests;
+			packageProductDependencies = (
+			);
+			productName = CallDemoAppUITests;
+			productReference = D90000000000000000000003 /* CallDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F7EFA573B5075BEF522A17AC /* CallDemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */;
@@ -429,26 +485,6 @@
 			productName = CallDemoApp;
 			productReference = 736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D90000000000000000000008 /* CallDemoAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */;
-			buildPhases = (
-				D90000000000000000000005 /* Sources */,
-				D90000000000000000000006 /* Frameworks */,
-				D90000000000000000000007 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9000000000000000000000A /* PBXTargetDependency */,
-			);
-			name = CallDemoAppUITests;
-			packageProductDependencies = (
-			);
-			productName = CallDemoAppUITests;
-			productReference = D90000000000000000000003 /* CallDemoAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -568,7 +604,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90000000000000000000001 /* CallDemoAppUITests.swift in Sources */,
+				D91000000000000000000001 /* CallDemoAppUITestCase.swift in Sources */,
+				D91000000000000000000002 /* SettingsUITests.swift in Sources */,
+				D91000000000000000000003 /* CallStateUITests.swift in Sources */,
+				D91000000000000000000004 /* CallCancellationUITests.swift in Sources */,
+				D91000000000000000000005 /* ManualCallUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,36 +623,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D9000000000000000000000B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = CallDemoApp;
-			};
-			name = Debug;
-		};
-		D9000000000000000000000C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = CallDemoApp;
-			};
-			name = Release;
-		};
 		21D31BB391420060DA64CBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
@@ -716,6 +726,38 @@
 			};
 			name = Release;
 		};
+		D9000000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = CallDemoApp;
+			};
+			name = Debug;
+		};
+		D9000000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = CallDemoApp;
+			};
+			name = Release;
+		};
 		F901A6AAB2B444A7431FB269 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -775,15 +817,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9000000000000000000000B /* Debug */,
-				D9000000000000000000000C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -798,6 +831,15 @@
 			buildConfigurations = (
 				2BEFE23624CA45D209556EA1 /* Debug */,
 				F901A6AAB2B444A7431FB269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9000000000000000000000B /* Debug */,
+				D9000000000000000000000C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

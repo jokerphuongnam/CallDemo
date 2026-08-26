@@ -8,7 +8,7 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
             localUserID: localUserID,
             peerName: peerDisplayID,
             direction: .outgoing,
-            phase: .connecting
+            phase: .waitingForPeer
         )
     }
 
@@ -20,7 +20,7 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
             localUserID: localUserID,
             peerName: peerName,
             direction: .incoming,
-            phase: .ringing
+            phase: .waitingForPeer
         )
     }
 
@@ -28,7 +28,7 @@ final class DefaultCallManagerImpl: CallManagerProtocol {
         _ call: ActiveCall
     ) -> ActiveCall {
         var connectedCall = call
-        connectedCall.phase = .connected
+        connectedCall.phase = .connecting
         return connectedCall
     }
 

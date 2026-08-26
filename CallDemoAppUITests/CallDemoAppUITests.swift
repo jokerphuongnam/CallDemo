@@ -4,6 +4,7 @@ final class CallDemoAppUITests: XCTestCase {
     private enum EnvironmentKey {
         static let currentUserID = "CALL_DEMO_CURRENT_USER_ID"
         static let partnerUserID = "CALL_DEMO_PARTNER_USER_ID"
+        static let userDefaultsSuite = "CALL_DEMO_USER_DEFAULTS_SUITE"
     }
 
     override func setUpWithError() throws {
@@ -20,6 +21,34 @@ final class CallDemoAppUITests: XCTestCase {
 
         XCTAssertTrue(app.textFields["settings.currentUserIDField"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.textFields["settings.partnerUserIDField"].exists)
+    }
+
+    func testSavingSettingsEnablesCallActionsWithoutRelaunch() {
+        let app = XCUIApplication()
+        app.launchEnvironment[EnvironmentKey.userDefaultsSuite] =
+            "CallDemoAppUITests.\(UUID().uuidString)"
+        app.launch()
+
+        let callButton = app.buttons["home.callButton"]
+        let incomingButton = app.buttons["home.simulateIncomingButton"]
+        XCTAssertTrue(callButton.waitForExistence(timeout: 10))
+        XCTAssertTrue(incomingButton.exists)
+        XCTAssertFalse(callButton.isEnabled)
+        XCTAssertFalse(incomingButton.isEnabled)
+
+        app.buttons["home.settingsButton"].tap()
+
+        let currentUserIDField = app.textFields["settings.currentUserIDField"]
+        let partnerUserIDField = app.textFields["settings.partnerUserIDField"]
+        XCTAssertTrue(currentUserIDField.waitForExistence(timeout: 5))
+        currentUserIDField.tap()
+        currentUserIDField.typeText("caller")
+        partnerUserIDField.tap()
+        partnerUserIDField.typeText("receiver")
+        app.buttons["settings.saveButton"].tap()
+
+        XCTAssertTrue(waitUntilEnabled(callButton, timeout: 5))
+        XCTAssertTrue(waitUntilEnabled(incomingButton, timeout: 5))
     }
 
     func testTapCallIfAvailable() {
@@ -117,5 +146,11 @@ final class CallDemoAppUITests: XCTestCase {
         guard let value else { return nil }
         let trimmedValue = value.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmedValue.isEmpty ? nil : trimmedValue
+    }
+
+    private func waitUntilEnabled(_ element: XCUIElement, timeout: TimeInterval) -> Bool {
+        let predicate = NSPredicate(format: "enabled == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
+        return XCTWaiter.wait(for: [expectation], timeout: timeout) == .completed
     }
 }

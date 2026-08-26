@@ -7,20 +7,28 @@ final class CallViewModel {
     private let logger: AppLoggerProtocol
 
     var activeCall: ActiveCall?
+    private(set) var hasCurrentUserID = false
+    private(set) var canStartOutgoingCall = false
+    private(set) var displayUserID = ""
+    private(set) var partnerDisplayUserID = ""
 
     init(useCase: CallUseCaseProtocol, logger: AppLoggerProtocol) {
         self.useCase = useCase
         self.logger = logger
+        refreshSettings()
     }
-
-    var hasCurrentUserID: Bool { useCase.hasCurrentUserID }
-    var canStartOutgoingCall: Bool { useCase.canStartOutgoingCall }
-    var displayUserID: String { useCase.currentDisplayID }
-    var partnerDisplayUserID: String { useCase.partnerDisplayID }
 
     var statusText: String {
         guard hasCurrentUserID else { return "Vào Settings để nhập ID hiện tại" }
         return activeCall == nil ? "Sẵn sàng với ID: \(displayUserID)" : "Đang có cuộc gọi"
+    }
+
+    func refreshSettings() {
+        hasCurrentUserID = useCase.hasCurrentUserID
+        canStartOutgoingCall = useCase.canStartOutgoingCall
+        displayUserID = useCase.currentDisplayID
+        partnerDisplayUserID = useCase.partnerDisplayID
+        logger.info("[Call] Settings refreshed")
     }
 
     func startCall() {

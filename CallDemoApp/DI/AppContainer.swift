@@ -4,6 +4,8 @@ import SwinjectAutoregistration
 
 @MainActor
 enum AppContainer {
+    private static let userDefaultsSuiteEnvironmentKey = "CALL_DEMO_USER_DEFAULTS_SUITE"
+
     static func make() -> Resolver {
         let container = Container()
         registerDependencies(in: container)
@@ -23,7 +25,19 @@ enum AppContainer {
 
     private static func registerSystemDependencies(in container: Container) {
         container.register(Resolver.self) { resolver in resolver }
-        container.register(UserDefaults.self) { _ in .standard }
+        container.register(UserDefaults.self) { _ in makeUserDefaults() }
+    }
+
+    private static func makeUserDefaults() -> UserDefaults {
+        guard
+            let suiteName = ProcessInfo.processInfo.environment[userDefaultsSuiteEnvironmentKey],
+            !suiteName.isEmpty,
+            let userDefaults = UserDefaults(suiteName: suiteName)
+        else {
+            return .standard
+        }
+
+        return userDefaults
     }
 
     private static func registerStorages(in container: Container) {

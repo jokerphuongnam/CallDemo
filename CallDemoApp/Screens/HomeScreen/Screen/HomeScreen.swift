@@ -59,7 +59,15 @@ struct HomeScreen: View {
                 .accessibilityIdentifier("home.settingsButton")
             }
         }
-        .sheet(isPresented: $isShowingSettings) { viewFactory.makeSettingsView() }
+        .sheet(
+            isPresented: $isShowingSettings,
+            onDismiss: {
+                withAnimation(.smooth) {
+                    callViewModel.refreshSettings()
+                }
+            },
+            content: viewFactory.makeSettingsView
+        )
         .fullScreenCover(item: $callViewModel.activeCall) { _ in
             viewFactory.makeCallScreen(
                 for: $callViewModel.activeCall,

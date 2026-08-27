@@ -5,6 +5,7 @@ class CallDemoAppUITestCase: XCTestCase {
         static let currentUserID = "CALL_DEMO_CURRENT_USER_ID"
         static let partnerUserID = "CALL_DEMO_PARTNER_USER_ID"
         static let userDefaultsSuite = "CALL_DEMO_USER_DEFAULTS_SUITE"
+        static let signalingStub = "CALL_DEMO_SIGNALING_STUB"
     }
 
     override func setUpWithError() throws {
@@ -13,11 +14,14 @@ class CallDemoAppUITestCase: XCTestCase {
 
     func launchConfiguredApp(
         currentUserID: String,
-        partnerUserID: String? = nil
+        partnerUserID: String? = nil,
+        prepareSignaling shouldPrepareSignaling: Bool = true,
+        signalingResult: String = "success"
     ) -> XCUIApplication {
         let app = XCUIApplication()
         app.launchEnvironment[EnvironmentKey.userDefaultsSuite] =
             "CallDemoAppUITests.\(UUID().uuidString)"
+        app.launchEnvironment[EnvironmentKey.signalingStub] = signalingResult
         app.launch()
 
         let settingsButton = app.buttons["home.settingsButton"]
@@ -39,7 +43,27 @@ class CallDemoAppUITestCase: XCTestCase {
         let saveButton = app.buttons["settings.saveButton"]
         XCTAssertTrue(saveButton.isEnabled)
         saveButton.tap()
+
+        if shouldPrepareSignaling {
+            prepareSignaling(in: app)
+        }
         return app
+    }
+
+    func prepareSignaling(in app: XCUIApplication) {
+        let prepareButton = app.buttons["home.prepareWebSocketButton"]
+        XCTAssertTrue(prepareButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(prepareButton.isEnabled)
+        prepareButton.tap()
+
+        let status = app.staticTexts["home.signalingPreparationText"]
+        XCTAssertTrue(
+            waitUntilValue(
+                status,
+                equals: "Thông tin WebSocket đã sẵn sàng",
+                timeout: 5
+            )
+        )
     }
 
     func configureUserIDsIfProvided(in app: XCUIApplication) {

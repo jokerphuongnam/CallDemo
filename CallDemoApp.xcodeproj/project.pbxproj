@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = U20000000000000000000001 /* DefaultCallUseCaseTests.swift */; };
+		U10000000000000000000003 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = U90000000000000000000001 /* Cuckoo */; };
+		V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */; };
+		V10000000000000000000002 /* CallActionButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000002 /* CallActionButtonTests.swift */; };
+		V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */; };
+		V10000000000000000000004 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000001 /* Mocker */; };
+		V10000000000000000000005 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000002 /* ViewInspector */; };
+		V10000000000000000000006 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000003 /* SnapshotTesting */; };
 		03420A3A6F0B859160178849 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */; };
 		139DC4ACC6577366658FF931 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE73D1CE7380570B1F8956B /* UserSettings.swift */; };
 		2BB9161E2FD4BD99E1AD834F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277FC02BB919142328CF16C /* AppDelegate.swift */; };
@@ -37,6 +45,13 @@
 		A80000000000000000000001 /* ConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000001 /* ConfigurationKey.swift */; };
 		A80000000000000000000002 /* Bundle+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* Bundle+Configuration.swift */; };
 		B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 218F0910D4F9435A442648B4 /* SwinjectAutoregistration */; };
+		F10000000000000000000021 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000002 /* NetworkManager */; };
+		F10000000000000000000022 /* NetworkManagerCredentialNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */; };
+		F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */; };
+		F10000000000000000000024 /* SignalingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000011 /* SignalingState.swift */; };
+		F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */; };
+		F10000000000000000000026 /* UITestSignalingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000013 /* UITestSignalingResult.swift */; };
+		F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000014 /* UITestSignalingRepositoryError.swift */; };
 		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
 		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
 		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
@@ -47,13 +62,32 @@
 		D91000000000000000000003 /* CallStateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000003 /* CallStateUITests.swift */; };
 		D91000000000000000000004 /* CallCancellationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000004 /* CallCancellationUITests.swift */; };
 		D91000000000000000000005 /* ManualCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000005 /* ManualCallUITests.swift */; };
+		D91000000000000000000006 /* SignalingPreparationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92000000000000000000006 /* SignalingPreparationUITests.swift */; };
 		E9C548C7E4A7DF7241488652 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075313AE82CEB8F8F645A53 /* SceneDelegate.swift */; };
 		EA9BE45210BAC0918B8585C3 /* CallUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */; };
+		F10000000000000000000001 /* SignalingCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000001 /* SignalingCredentials.swift */; };
+		F10000000000000000000002 /* CredentialRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000002 /* CredentialRequestNetworkModel.swift */; };
+		F10000000000000000000003 /* CredentialResponseNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000003 /* CredentialResponseNetworkModel.swift */; };
+		F10000000000000000000004 /* CredentialNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000004 /* CredentialNetworkProtocol.swift */; };
+		F10000000000000000000005 /* URLSessionCredentialNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000005 /* URLSessionCredentialNetworkImpl.swift */; };
+		F10000000000000000000006 /* SignalingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000006 /* SignalingRepositoryProtocol.swift */; };
+		F10000000000000000000007 /* DefaultSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000007 /* DefaultSignalingRepositoryImpl.swift */; };
+		F10000000000000000000008 /* SignalingPreparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000008 /* SignalingPreparation.swift */; };
+		F10000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */; };
+		F1000000000000000000000A /* NodeBootstrapNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000A /* NodeBootstrapNetworkProtocol.swift */; };
+		F1000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift */; };
 		F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D294D68CEF1E2C731A809B /* HomeScreen.swift */; };
 		FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		U60000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E9A8B7F37BD101A139284A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7EFA573B5075BEF522A17AC;
+			remoteInfo = CallDemoApp;
+		};
 		D90000000000000000000009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E9A8B7F37BD101A139284A9 /* Project object */;
@@ -64,6 +98,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		U20000000000000000000001 /* DefaultCallUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseTests.swift; sourceTree = "<group>"; };
+		U20000000000000000000003 /* CallDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCredentialNetworkTests.swift; sourceTree = "<group>"; };
+		V20000000000000000000002 /* CallActionButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButtonTests.swift; sourceTree = "<group>"; };
+		V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRequestSnapshotTests.swift; sourceTree = "<group>"; };
 		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		17669BD341892C5634410056 /* UserIDManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManagerProtocol.swift; sourceTree = "<group>"; };
 		1CE73D1CE7380570B1F8956B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -109,15 +148,45 @@
 		D92000000000000000000003 /* CallStateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStateUITests.swift; sourceTree = "<group>"; };
 		D92000000000000000000004 /* CallCancellationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCancellationUITests.swift; sourceTree = "<group>"; };
 		D92000000000000000000005 /* ManualCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCallUITests.swift; sourceTree = "<group>"; };
+		D92000000000000000000006 /* SignalingPreparationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingPreparationUITests.swift; sourceTree = "<group>"; };
 		E277FC02BB919142328CF16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000001 /* SignalingCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingCredentials.swift; sourceTree = "<group>"; };
+		F20000000000000000000002 /* CredentialRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRequestNetworkModel.swift; sourceTree = "<group>"; };
+		F20000000000000000000003 /* CredentialResponseNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialResponseNetworkModel.swift; sourceTree = "<group>"; };
+		F20000000000000000000004 /* CredentialNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialNetworkProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000005 /* URLSessionCredentialNetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCredentialNetworkImpl.swift; sourceTree = "<group>"; };
+		F20000000000000000000006 /* SignalingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingRepositoryProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000007 /* DefaultSignalingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignalingRepositoryImpl.swift; sourceTree = "<group>"; };
+		F20000000000000000000008 /* SignalingPreparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingPreparation.swift; sourceTree = "<group>"; };
+		F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBootstrapResponseNetworkModel.swift; sourceTree = "<group>"; };
+		F2000000000000000000000A /* NodeBootstrapNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBootstrapNetworkProtocol.swift; sourceTree = "<group>"; };
+		F2000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNodeBootstrapNetworkImpl.swift; sourceTree = "<group>"; };
+		F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerCredentialNetworkProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerNodeNetworkProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000011 /* SignalingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingState.swift; sourceTree = "<group>"; };
+		F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryImpl.swift; sourceTree = "<group>"; };
+		F20000000000000000000013 /* UITestSignalingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingResult.swift; sourceTree = "<group>"; };
+		F20000000000000000000014 /* UITestSignalingRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		U40000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				U10000000000000000000003 /* Cuckoo in Frameworks */,
+				V10000000000000000000004 /* Mocker in Frameworks */,
+				V10000000000000000000005 /* ViewInspector in Frameworks */,
+				V10000000000000000000006 /* SnapshotTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87D23CE89DA5A2A612340C66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10000000000000000000021 /* NetworkManager in Frameworks */,
 				A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */,
 				B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */,
 			);
@@ -133,6 +202,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		U30000000000000000000001 /* CallDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				U30000000000000000000002 /* UseCase */,
+				V30000000000000000000001 /* Network */,
+				V30000000000000000000002 /* View */,
+				V30000000000000000000003 /* Snapshot */,
+			);
+			path = CallDemoAppTests;
+			sourceTree = "<group>";
+		};
+		U30000000000000000000002 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				U20000000000000000000001 /* DefaultCallUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000001 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000002 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000002 /* CallActionButtonTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000003 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */,
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
 		06FC75A51C87C52E292C08B5 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +269,8 @@
 			children = (
 				F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */,
 				B30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift */,
+				F20000000000000000000006 /* SignalingRepositoryProtocol.swift */,
+				F20000000000000000000007 /* DefaultSignalingRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -210,6 +324,7 @@
 			children = (
 				736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */,
 				D90000000000000000000003 /* CallDemoAppUITests.xctest */,
+				U20000000000000000000003 /* CallDemoAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +347,9 @@
 				B20000000000000000000001 /* CallDirection.swift */,
 				B20000000000000000000002 /* CallPhase.swift */,
 				1CE73D1CE7380570B1F8956B /* UserSettings.swift */,
+				F20000000000000000000001 /* SignalingCredentials.swift */,
+				F20000000000000000000008 /* SignalingPreparation.swift */,
+				F20000000000000000000011 /* SignalingState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +390,7 @@
 			children = (
 				756B3D9E3570C660BD0F847A /* CallDemoApp */,
 				D90000000000000000000004 /* CallDemoAppUITests */,
+				U30000000000000000000001 /* CallDemoAppTests */,
 				47B32A644BCE7D076818EC8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -367,6 +486,7 @@
 				D93000000000000000000001 /* Call */,
 				D93000000000000000000002 /* Settings */,
 				D93000000000000000000003 /* Support */,
+				D93000000000000000000004 /* Signaling */,
 			);
 			path = CallDemoAppUITests;
 			sourceTree = "<group>";
@@ -393,17 +513,85 @@
 			isa = PBXGroup;
 			children = (
 				D92000000000000000000001 /* CallDemoAppUITestCase.swift */,
+				D93000000000000000000005 /* Repositories */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		D93000000000000000000005 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */,
+				F20000000000000000000013 /* UITestSignalingResult.swift */,
+				F20000000000000000000014 /* UITestSignalingRepositoryError.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D93000000000000000000004 /* Signaling */ = {
+			isa = PBXGroup;
+			children = (
+				D92000000000000000000006 /* SignalingPreparationUITests.swift */,
+			);
+			path = Signaling;
 			sourceTree = "<group>";
 		};
 		DF97E2DF024E01766EA9EC03 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				5FEBB511EB86758EC150CD20 /* Model */,
+				F30000000000000000000001 /* Network */,
 				1A53F391377FE3B1E0414FD4 /* Storage */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000001 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F30000000000000000000002 /* Credential */,
+				F30000000000000000000004 /* NodeBootstrap */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000002 /* Credential */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000004 /* CredentialNetworkProtocol.swift */,
+				F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */,
+				F20000000000000000000005 /* URLSessionCredentialNetworkImpl.swift */,
+				F30000000000000000000003 /* Model */,
+			);
+			path = Credential;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000003 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000002 /* CredentialRequestNetworkModel.swift */,
+				F20000000000000000000003 /* CredentialResponseNetworkModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000004 /* NodeBootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				F2000000000000000000000A /* NodeBootstrapNetworkProtocol.swift */,
+				F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */,
+				F2000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift */,
+				F30000000000000000000005 /* Model */,
+			);
+			path = NodeBootstrap;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000005 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E08FA41E7C030D65821CC290 /* Call */ = {
@@ -445,6 +633,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		U50000000000000000000001 /* CallDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */;
+			buildPhases = (
+				U40000000000000000000001 /* Sources */,
+				U40000000000000000000002 /* Frameworks */,
+				U40000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				U60000000000000000000002 /* PBXTargetDependency */,
+				U60000000000000000000003 /* PBXTargetDependency */,
+			);
+			name = CallDemoAppTests;
+			packageProductDependencies = (
+				U90000000000000000000001 /* Cuckoo */,
+				V90000000000000000000001 /* Mocker */,
+				V90000000000000000000002 /* ViewInspector */,
+				V90000000000000000000003 /* SnapshotTesting */,
+			);
+			productName = CallDemoAppTests;
+			productReference = U20000000000000000000003 /* CallDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D90000000000000000000008 /* CallDemoAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */;
@@ -479,6 +692,7 @@
 			);
 			name = CallDemoApp;
 			packageProductDependencies = (
+				F50000000000000000000002 /* NetworkManager */,
 				76435CAB8F8C75EC8EAF60E5 /* Swinject */,
 				218F0910D4F9435A442648B4 /* SwinjectAutoregistration */,
 			);
@@ -505,6 +719,11 @@
 			mainGroup = 867035C05721A35413F6ED07;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */,
+				V90000000000000000000004 /* XCRemoteSwiftPackageReference "Mocker" */,
+				V90000000000000000000005 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 				A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */,
 				5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
@@ -514,12 +733,20 @@
 			projectRoot = "";
 			targets = (
 				F7EFA573B5075BEF522A17AC /* CallDemoApp */,
+				U50000000000000000000001 /* CallDemoAppTests */,
 				D90000000000000000000008 /* CallDemoAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		U40000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D90000000000000000000007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,6 +768,7 @@
 			inputPaths = (
 				"$(SRCROOT)/.swiftlint.yml",
 				"$(SRCROOT)/CallDemoApp",
+				"$(SRCROOT)/CallDemoAppTests",
 				"$(SRCROOT)/CallDemoAppUITests",
 				"$(SRCROOT)/Scripts/swiftlint.sh",
 			);
@@ -556,6 +784,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		U40000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */,
+				V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */,
+				V10000000000000000000002 /* CallActionButtonTests.swift in Sources */,
+				V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C8E66145EDFC27D5F8DC9239 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,6 +836,23 @@
 				9550F807A6578A4F2260DD10 /* UserSettingsRepositoryProtocol.swift in Sources */,
 				A30000000000000000000002 /* DefaultUserSettingsRepositoryImpl.swift in Sources */,
 				965A5246EBF8963FBAAE9D08 /* UserSettingsStorageModel.swift in Sources */,
+				F10000000000000000000001 /* SignalingCredentials.swift in Sources */,
+				F10000000000000000000002 /* CredentialRequestNetworkModel.swift in Sources */,
+				F10000000000000000000003 /* CredentialResponseNetworkModel.swift in Sources */,
+				F10000000000000000000004 /* CredentialNetworkProtocol.swift in Sources */,
+				F10000000000000000000022 /* NetworkManagerCredentialNetworkProtocol.swift in Sources */,
+				F10000000000000000000005 /* URLSessionCredentialNetworkImpl.swift in Sources */,
+				F10000000000000000000006 /* SignalingRepositoryProtocol.swift in Sources */,
+				F10000000000000000000007 /* DefaultSignalingRepositoryImpl.swift in Sources */,
+				F10000000000000000000008 /* SignalingPreparation.swift in Sources */,
+				F10000000000000000000024 /* SignalingState.swift in Sources */,
+				F10000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift in Sources */,
+				F1000000000000000000000A /* NodeBootstrapNetworkProtocol.swift in Sources */,
+				F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */,
+				F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */,
+				F10000000000000000000026 /* UITestSignalingResult.swift in Sources */,
+				F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */,
+				F1000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,12 +865,22 @@
 				D91000000000000000000003 /* CallStateUITests.swift in Sources */,
 				D91000000000000000000004 /* CallCancellationUITests.swift in Sources */,
 				D91000000000000000000005 /* ManualCallUITests.swift in Sources */,
+				D91000000000000000000006 /* SignalingPreparationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		U60000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
+			targetProxy = U60000000000000000000001 /* PBXContainerItemProxy */;
+		};
+		U60000000000000000000003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = U90000000000000000000003 /* CuckooPluginSingleFile */;
+		};
 		D9000000000000000000000A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
@@ -623,6 +889,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		U70000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
+			};
+			name = Debug;
+		};
+		U70000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
+			};
+			name = Release;
+		};
 		21D31BB391420060DA64CBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
@@ -817,6 +1117,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				U70000000000000000000001 /* Debug */,
+				U70000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -847,6 +1156,46 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.0;
+			};
+		};
+		V90000000000000000000004 /* XCRemoteSwiftPackageReference "Mocker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WeTransfer/Mocker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+		V90000000000000000000005 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.3;
+			};
+		};
+		V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.19.2;
+			};
+		};
+		F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jokerphuongnam/NetworkManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 		5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
@@ -866,6 +1215,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		U90000000000000000000001 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
+		};
+		U90000000000000000000003 /* CuckooPluginSingleFile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = "plugin:CuckooPluginSingleFile";
+		};
+		V90000000000000000000001 /* Mocker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = V90000000000000000000004 /* XCRemoteSwiftPackageReference "Mocker" */;
+			productName = Mocker;
+		};
+		V90000000000000000000002 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = V90000000000000000000005 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+		V90000000000000000000003 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		F50000000000000000000002 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			productName = NetworkManager;
+		};
 		218F0910D4F9435A442648B4 /* SwinjectAutoregistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;

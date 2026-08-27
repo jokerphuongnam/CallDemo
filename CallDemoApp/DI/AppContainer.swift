@@ -1,10 +1,12 @@
 import Foundation
+import NetworkManager
 import Swinject
 import SwinjectAutoregistration
 
 @MainActor
 enum AppContainer {
     private static let userDefaultsSuiteEnvironmentKey = "CALL_DEMO_USER_DEFAULTS_SUITE"
+    private static let signalingStubEnvironmentKey = "CALL_DEMO_SIGNALING_STUB"
 
     static func make() -> Resolver {
         let container = Container()
@@ -14,6 +16,7 @@ enum AppContainer {
 
     private static func registerDependencies(in container: Container) {
         registerSystemDependencies(in: container)
+        registerNetworks(in: container)
         registerStorages(in: container)
         registerRepositories(in: container)
         registerManagers(in: container)
@@ -26,6 +29,36 @@ enum AppContainer {
     private static func registerSystemDependencies(in container: Container) {
         container.register(Resolver.self) { resolver in resolver }
         container.register(UserDefaults.self) { _ in makeUserDefaults() }
+        container.register(URLSession.self) { _ in .shared }
+        container.register(NetworkSession.self) { _ in makeNetworkSession() }
+    }
+
+    private static func makeNetworkSession() -> NetworkSession {
+        let baseURLString = Bundle.main.configurationValue(for: .signalingBaseURL)
+        guard let baseURL = URL(string: baseURLString) else {
+            preconditionFailure("SIGNALING_BASE_URL is invalid: \(baseURLString)")
+        }
+
+        return NetworkSession(
+            baseUrl: baseURL,
+            client: URLSessionClient.shared,
+            converterFactory: JSONDecodableConverterFactory(),
+            headers: ["Content-Type": "application/json"],
+            interceptors: [LoggingInterceptor(level: .all)]
+        )
+    }
+
+    private static func registerNetworks(in container: Container) {
+        container.register(CredentialNetworkProtocol.self) { resolver in
+            NetworkManagerCredentialNetworkProtocolImpl(
+                session: resolver.resolveRequired(NetworkSession.self)
+            )
+        }
+        container.register(NodeBootstrapNetworkProtocol.self) { resolver in
+            NetworkManagerNodeNetworkProtocolImpl(
+                session: resolver.resolveRequired(NetworkSession.self)
+            )
+        }
     }
 
     private static func makeUserDefaults() -> UserDefaults {
@@ -52,6 +85,21 @@ enum AppContainer {
             UserSettingsRepositoryProtocol.self,
             initializer: DefaultUserSettingsRepositoryImpl.init
         )
+        if let stubResult = signalingStubResult {
+            container.register(SignalingRepositoryProtocol.self) { _ in
+                UITestSignalingRepositoryImpl(result: stubResult)
+            }
+        } else {
+            container.autoregister(
+                SignalingRepositoryProtocol.self,
+                initializer: DefaultSignalingRepositoryImpl.init
+            )
+        }
+    }
+
+    private static var signalingStubResult: UITestSignalingResult? {
+        let value = ProcessInfo.processInfo.environment[signalingStubEnvironmentKey]
+        return value.flatMap(UITestSignalingResult.init(rawValue:))
     }
 
     private static func registerManagers(in container: Container) {

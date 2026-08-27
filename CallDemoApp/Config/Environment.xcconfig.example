@@ -1,5 +1,6 @@
 // Copy this file to Environment.xcconfig and replace the placeholder values.
 SERVER_DOMAIN = example.com
-BASE_URL = https:/$()/$(SERVER_DOMAIN)
-WEBSOCKET_URL = wss:/$()/$(SERVER_DOMAIN)
+SIGNALING_BASE_URL = https:/$()/api.example.com
+# WebSocket URL is returned dynamically by GET /api/v1/nodes.
+WEBSOCKET_URL =
 USER_ID_PREFIX = @

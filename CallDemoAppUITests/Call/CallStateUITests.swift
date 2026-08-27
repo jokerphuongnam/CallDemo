@@ -18,7 +18,10 @@ final class CallStateUITests: CallDemoAppUITestCase {
     }
 
     func testIncomingAnswerWaitsForSimulatedPartner() {
-        let app = launchConfiguredApp(currentUserID: "receiver")
+        let app = launchConfiguredApp(
+            currentUserID: "receiver",
+            partnerUserID: "caller"
+        )
 
         let simulateIncomingButton = app.buttons["home.simulateIncomingButton"]
         XCTAssertTrue(simulateIncomingButton.waitForExistence(timeout: 10))

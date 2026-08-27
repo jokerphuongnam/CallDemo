@@ -21,7 +21,10 @@ final class CallCancellationUITests: CallDemoAppUITestCase {
     }
 
     func testEndingIncomingCallWhileWaitingForPartnerCancelsProgress() {
-        let app = launchConfiguredApp(currentUserID: "receiver")
+        let app = launchConfiguredApp(
+            currentUserID: "receiver",
+            partnerUserID: "caller"
+        )
         let simulateIncomingButton = app.buttons["home.simulateIncomingButton"]
         XCTAssertTrue(waitUntilEnabled(simulateIncomingButton, timeout: 5))
         simulateIncomingButton.tap()
@@ -38,7 +41,10 @@ final class CallCancellationUITests: CallDemoAppUITestCase {
     }
 
     func testEndingIncomingCallWhileConnectingWebRTCCancelsProgress() {
-        let app = launchConfiguredApp(currentUserID: "receiver")
+        let app = launchConfiguredApp(
+            currentUserID: "receiver",
+            partnerUserID: "caller"
+        )
         let simulateIncomingButton = app.buttons["home.simulateIncomingButton"]
         XCTAssertTrue(waitUntilEnabled(simulateIncomingButton, timeout: 5))
         simulateIncomingButton.tap()

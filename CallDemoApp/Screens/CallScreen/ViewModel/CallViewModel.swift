@@ -13,6 +13,25 @@ final class CallViewModel {
     private(set) var canStartOutgoingCall = false
     private(set) var displayUserID = ""
     private(set) var partnerDisplayUserID = ""
+    private(set) var signalingState = SignalingState.idle
+    private(set) var signalingPreparation: SignalingPreparation?
+
+    var canUseCallActions: Bool {
+        canStartOutgoingCall && signalingState == .ready
+    }
+
+    var signalingPreparationText: String {
+        switch signalingState {
+        case .idle:
+            "Chưa chuẩn bị WebSocket"
+        case .preparing:
+            "Đang chuẩn bị WebSocket…"
+        case .ready:
+            "Thông tin WebSocket đã sẵn sàng"
+        case .failed:
+            "Chuẩn bị WebSocket thất bại"
+        }
+    }
 
     init(useCase: CallUseCaseProtocol, logger: AppLoggerProtocol) {
         self.useCase = useCase
@@ -26,15 +45,29 @@ final class CallViewModel {
     }
 
     func refreshSettings() {
+        let previousDisplayUserID = displayUserID
+        let previousPartnerDisplayUserID = partnerDisplayUserID
         hasCurrentUserID = useCase.hasCurrentUserID
         canStartOutgoingCall = useCase.canStartOutgoingCall
         displayUserID = useCase.currentDisplayID
         partnerDisplayUserID = useCase.partnerDisplayID
+
+        let didChangeIdentity =
+            previousDisplayUserID != displayUserID
+            || previousPartnerDisplayUserID != partnerDisplayUserID
+        if didChangeIdentity {
+            signalingPreparation = nil
+            signalingState = .idle
+        }
         logger.info("[Call] Settings refreshed")
     }
 
     func startCall() {
         logger.info("[Call] Start call tapped")
+        guard canUseCallActions else {
+            logger.info("[Call] Start call rejected: signaling is not ready")
+            return
+        }
         activeCall = useCase.startOutgoingCall()
         logger.info(
             activeCall == nil
@@ -46,8 +79,34 @@ final class CallViewModel {
         scheduleSignalingReady(callID: callID)
     }
 
+    func requestSignalingCredentials() {
+        guard signalingState != .preparing else { return }
+        signalingState = .preparing
+        logger.info("[Signaling] Connection information preparation started")
+
+        Task {
+            do {
+                let preparation = try await useCase.prepareSignaling()
+                try await Task.sleep(for: .seconds(2))
+                signalingPreparation = preparation
+                signalingState = .ready
+                logger.info(
+                    "[Signaling] Connection information ready: "
+                        + preparation.webSocketURL.absoluteString
+                )
+            } catch {
+                signalingState = .failed
+                logger.info("[Signaling] Credential request failed: \(error.localizedDescription)")
+            }
+        }
+    }
+
     func receiveCall() {
         logger.info("[Call] Simulate incoming call tapped")
+        guard canUseCallActions else {
+            logger.info("[Call] Incoming call rejected: signaling is not ready")
+            return
+        }
         let peerName = partnerDisplayUserID.isEmpty ? "Partner" : partnerDisplayUserID
         activeCall = useCase.makeIncomingCall(from: peerName)
 

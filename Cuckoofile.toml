@@ -1,0 +1,14 @@
+[modules.CallDemoAppTests]
+output = "CallDemoAppTests/Generated/GeneratedMocks.swift"
+imports = ["Foundation"]
+testableImports = ["CallDemoApp"]
+sources = [
+    "CallDemoApp/Manager/Call/CallManagerProtocol.swift",
+    "CallDemoApp/Manager/Identity/UserIDManagerProtocol.swift",
+    "CallDemoApp/Repositories/SignalingRepositoryProtocol.swift",
+    "CallDemoApp/Repositories/UserSettingsRepositoryProtocol.swift",
+]
+
+[modules.CallDemoAppTests.options]
+protocolsOnly = true
+keepDocumentation = false

@@ -13,10 +13,11 @@ final class SettingsUITests: CallDemoAppUITestCase {
         XCTAssertTrue(app.textFields["settings.partnerUserIDField"].exists)
     }
 
-    func testSavingSettingsEnablesCallActionsWithoutRelaunch() {
+    func testSavingSettingsRequiresSignalingBeforeEnablingCallActions() {
         let app = XCUIApplication()
         app.launchEnvironment[EnvironmentKey.userDefaultsSuite] =
             "CallDemoAppUITests.\(UUID().uuidString)"
+        app.launchEnvironment[EnvironmentKey.signalingStub] = "success"
         app.launch()
 
         let callButton = app.buttons["home.callButton"]
@@ -37,6 +38,10 @@ final class SettingsUITests: CallDemoAppUITestCase {
         partnerUserIDField.typeText("receiver")
         app.buttons["settings.saveButton"].tap()
 
+        XCTAssertFalse(callButton.isEnabled)
+        XCTAssertFalse(incomingButton.isEnabled)
+
+        prepareSignaling(in: app)
         XCTAssertTrue(waitUntilEnabled(callButton, timeout: 5))
         XCTAssertTrue(waitUntilEnabled(incomingButton, timeout: 5))
     }

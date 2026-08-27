@@ -24,21 +24,36 @@ struct HomeScreen: View {
                 Text(callViewModel.statusText).foregroundStyle(.secondary)
                 GlassEffectContainer(spacing: 16) {
                     VStack(spacing: 16) {
+                        Button("Chuẩn bị WebSocket", systemImage: "network") {
+                            callViewModel.requestSignalingCredentials()
+                        }
+                        .accessibilityIdentifier("home.prepareWebSocketButton")
+                        .buttonStyle(.glass)
+                        .disabled(
+                            !callViewModel.hasCurrentUserID
+                                || callViewModel.signalingState == .preparing
+                        )
+
+                        Text(callViewModel.signalingPreparationText)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .accessibilityIdentifier("home.signalingPreparationText")
+
                         Button(callButtonTitle, systemImage: "phone.fill") {
                             callViewModel.startCall()
                         }
                         .accessibilityIdentifier("home.callButton")
                         .buttonStyle(.glassProminent)
-                        .disabled(!callViewModel.canStartOutgoingCall)
-                        .animation(.smooth, value: callViewModel.canStartOutgoingCall)
+                        .disabled(!callViewModel.canUseCallActions)
+                        .animation(.smooth, value: callViewModel.canUseCallActions)
 
                         Button("Giả lập cuộc gọi đến", systemImage: "phone.arrow.down.left") {
                             callViewModel.receiveCall()
                         }
                         .accessibilityIdentifier("home.simulateIncomingButton")
                         .buttonStyle(.glass)
-                        .disabled(!callViewModel.hasCurrentUserID)
-                        .animation(.smooth, value: callViewModel.hasCurrentUserID)
+                        .disabled(!callViewModel.canUseCallActions)
+                        .animation(.smooth, value: callViewModel.canUseCallActions)
                     }
                 }
             }

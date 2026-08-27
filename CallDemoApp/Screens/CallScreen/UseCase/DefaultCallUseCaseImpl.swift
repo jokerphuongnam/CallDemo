@@ -2,15 +2,18 @@ import Foundation
 
 final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
     private let repository: UserSettingsRepositoryProtocol
+    private let signalingRepository: SignalingRepositoryProtocol
     private let callManager: CallManagerProtocol
     private let userIDManager: UserIDManagerProtocol
 
     init(
         repository: UserSettingsRepositoryProtocol,
+        signalingRepository: SignalingRepositoryProtocol,
         callManager: CallManagerProtocol,
         userIDManager: UserIDManagerProtocol
     ) {
         self.repository = repository
+        self.signalingRepository = signalingRepository
         self.callManager = callManager
         self.userIDManager = userIDManager
     }
@@ -21,7 +24,7 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
 
     var canStartOutgoingCall: Bool {
         hasCurrentUserID
-            && !settings.partnerUserID.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        && !settings.partnerUserID.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
     var currentDisplayID: String {
@@ -30,6 +33,11 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
 
     var partnerDisplayID: String {
         userIDManager.displayID(from: settings.partnerUserID)
+    }
+
+    func prepareSignaling() async throws -> SignalingPreparation {
+        let currentUserID = userIDManager.signalingID(from: settings.currentUserID)
+        return try await signalingRepository.prepare(userID: currentUserID)
     }
 
     func startOutgoingCall() -> ActiveCall? {

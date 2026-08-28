@@ -1,6 +1,6 @@
 import Foundation
 
-extension URLSessionWebSocketTask {
+public extension URLSessionWebSocketTask {
     @discardableResult
     func store(_ bag: CancelBag) -> Int {
         bag.insert {

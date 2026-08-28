@@ -28,6 +28,10 @@
 		Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */; };
 		Y10000000000000000000008 /* TimerCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000008 /* TimerCancelBagTests.swift */; };
 		Y10000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */; };
+		Z10000000000000000000001 /* AsyncBroadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000001 /* AsyncBroadcast.swift */; };
+		Z10000000000000000000002 /* AsyncBroadcastHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000002 /* AsyncBroadcastHub.swift */; };
+		Z10000000000000000000003 /* AsyncBroadcastStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000003 /* AsyncBroadcastStorage.swift */; };
+		Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000005 /* AsyncBroadcastTests.swift */; };
 		03420A3A6F0B859160178849 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */; };
 		139DC4ACC6577366658FF931 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE73D1CE7380570B1F8956B /* UserSettings.swift */; };
 		2BB9161E2FD4BD99E1AD834F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277FC02BB919142328CF16C /* AppDelegate.swift */; };
@@ -134,6 +138,10 @@
 		Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserverCancelBagTests.swift; sourceTree = "<group>"; };
 		Y20000000000000000000008 /* TimerCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCancelBagTests.swift; sourceTree = "<group>"; };
 		Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWebSocketTaskCancelBagTests.swift; sourceTree = "<group>"; };
+		Z20000000000000000000001 /* AsyncBroadcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcast.swift; sourceTree = "<group>"; };
+		Z20000000000000000000002 /* AsyncBroadcastHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastHub.swift; sourceTree = "<group>"; };
+		Z20000000000000000000003 /* AsyncBroadcastStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastStorage.swift; sourceTree = "<group>"; };
+		Z20000000000000000000005 /* AsyncBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastTests.swift; sourceTree = "<group>"; };
 		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		17669BD341892C5634410056 /* UserIDManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManagerProtocol.swift; sourceTree = "<group>"; };
 		1CE73D1CE7380570B1F8956B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 		X30000000000000000000001 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				Z30000000000000000000001 /* AsyncBroadcast */,
 				X30000000000000000000002 /* CancelBag */,
 			);
 			path = Utils;
@@ -307,6 +316,7 @@
 		X30000000000000000000003 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				Z30000000000000000000002 /* AsyncBroadcast */,
 				X30000000000000000000004 /* CancelBag */,
 			);
 			path = Utils;
@@ -323,6 +333,24 @@
 				Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */,
 			);
 			path = CancelBag;
+			sourceTree = "<group>";
+		};
+		Z30000000000000000000001 /* AsyncBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				Z20000000000000000000001 /* AsyncBroadcast.swift */,
+				Z20000000000000000000002 /* AsyncBroadcastHub.swift */,
+				Z20000000000000000000003 /* AsyncBroadcastStorage.swift */,
+			);
+			path = AsyncBroadcast;
+			sourceTree = "<group>";
+		};
+		Z30000000000000000000002 /* AsyncBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				Z20000000000000000000005 /* AsyncBroadcastTests.swift */,
+			);
+			path = AsyncBroadcast;
 			sourceTree = "<group>";
 		};
 		06FC75A51C87C52E292C08B5 /* HomeScreen */ = {
@@ -891,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */,
 				U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */,
 				V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */,
 				V10000000000000000000002 /* CallActionButtonTests.swift in Sources */,
@@ -908,6 +937,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				Z10000000000000000000001 /* AsyncBroadcast.swift in Sources */,
+				Z10000000000000000000002 /* AsyncBroadcastHub.swift in Sources */,
+				Z10000000000000000000003 /* AsyncBroadcastStorage.swift in Sources */,
 				X10000000000000000000001 /* CancelBag.swift in Sources */,
 				X10000000000000000000002 /* Cancellable+CancelBag.swift in Sources */,
 				X10000000000000000000003 /* Task+CancelBag.swift in Sources */,

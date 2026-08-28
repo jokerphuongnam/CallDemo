@@ -1,6 +1,6 @@
 import Foundation
 
-extension NSObjectProtocol {
+public extension NSObjectProtocol {
     @discardableResult
     func store(
         _ bag: CancelBag,

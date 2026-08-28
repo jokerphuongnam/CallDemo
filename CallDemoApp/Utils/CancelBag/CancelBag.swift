@@ -1,7 +1,7 @@
 import Combine
 import Foundation
 
-final class CancelBag: Cancellable {
+public final class CancelBag: Cancellable {
     private struct Entry {
         let cancellable: AnyCancellable
         let childBag: CancelBag?
@@ -13,17 +13,19 @@ final class CancelBag: Cancellable {
     private var entries: [Int: Entry] = [:]
     private var isCancelled = false
 
-    var count: Int {
+    public var count: Int {
         lock.withLock {
             entries.count
         }
     }
 
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         lock.withLock {
             entries.isEmpty
         }
     }
+
+    public init() {}
 
     @discardableResult
     func insert(_ cancellation: @escaping () -> Void) -> Int {
@@ -42,7 +44,7 @@ final class CancelBag: Cancellable {
     }
 
     @discardableResult
-    func remove(_ id: Int) -> Bool {
+    public func remove(_ id: Int) -> Bool {
         let cancellable = lock.withLock {
             entries.removeValue(forKey: id)?.cancellable
         }
@@ -51,11 +53,11 @@ final class CancelBag: Cancellable {
         return cancellable != nil
     }
 
-    func reset() {
+    public func reset() {
         cancelEntries(shouldClose: false)
     }
 
-    func cancel() {
+    public func cancel() {
         cancelEntries(shouldClose: true)
     }
 

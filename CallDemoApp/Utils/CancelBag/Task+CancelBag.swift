@@ -1,4 +1,4 @@
-extension Task {
+public extension Task {
     @discardableResult
     func store(_ bag: CancelBag) -> Int {
         let id = bag.insert {

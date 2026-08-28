@@ -4,8 +4,8 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
     private let session: URLSession
     private let rawMessageContinuation: AsyncStream<String>.Continuation
     let rawMessages: AsyncStream<String>
+    private let cancelBag = CancelBag()
     private var task: URLSessionWebSocketTask?
-    private var receiveTask: Task<Void, Never>?
 
     init(session: URLSession) {
         self.session = session
@@ -20,6 +20,7 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
         disconnect()
         let task = session.webSocketTask(with: url)
         self.task = task
+        task.store(cancelBag)
         task.resume()
 
         print("[Signaling][WebSocket][Connecting][\(role.rawValue)] \(url.absoluteString)")
@@ -35,9 +36,7 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
     }
 
     func disconnect() {
-        receiveTask?.cancel()
-        receiveTask = nil
-        task?.cancel(with: .goingAway, reason: nil)
+        cancelBag.reset()
         task = nil
     }
 
@@ -63,7 +62,8 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
     }
 
     private func startReceiveLoop(task: URLSessionWebSocketTask) {
-        receiveTask = Task { [weak self] in
+        cancelBag.reset()
+        Task { [weak self] in
             while !Task.isCancelled {
                 do {
                     let rawMessage = try await task.receive().rawText
@@ -77,6 +77,7 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
                 }
             }
         }
+        .store(cancelBag)
     }
 }
 

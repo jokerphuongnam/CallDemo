@@ -6,8 +6,8 @@ import Observation
 final class CallViewModel {
     private let useCase: CallUseCaseProtocol
     private let logger: AppLoggerProtocol
-    @ObservationIgnored private var callProgressTask: Task<Void, Never>?
-    @ObservationIgnored private var socketConnectionTask: Task<Void, Never>?
+    @ObservationIgnored private let callProgressCancelBag = CancelBag()
+    @ObservationIgnored private let signalingCancelBag = CancelBag()
 
     var activeCall: ActiveCall?
     private(set) var hasCurrentUserID = false
@@ -61,7 +61,7 @@ final class CallViewModel {
             previousDisplayUserID != displayUserID
             || previousPartnerDisplayUserID != partnerDisplayUserID
         if didChangeIdentity {
-            socketConnectionTask?.cancel()
+            signalingCancelBag.reset()
             useCase.disconnectSignaling()
             signalingPreparation = nil
             signalingState = .idle
@@ -98,9 +98,14 @@ final class CallViewModel {
         signalingState = .preparing
         logger.info("[Signaling] Connection information preparation started")
 
-        Task {
+        signalingCancelBag.reset()
+        let useCase = useCase
+        let logger = logger
+        Task { [weak self] in
             do {
                 let preparation = try await useCase.prepareSignaling()
+                guard !Task.isCancelled else { return }
+                guard let self else { return }
                 signalingPreparation = preparation
                 signalingState = .ready
                 logger.info(
@@ -108,10 +113,13 @@ final class CallViewModel {
                         + preparation.webSocketURL.absoluteString
                 )
             } catch {
+                guard !Task.isCancelled else { return }
+                guard let self else { return }
                 signalingState = .failed
                 logger.info("[Signaling] Credential request failed: \(error.localizedDescription)")
             }
         }
+        .store(signalingCancelBag)
     }
 
     func receiveCall() {
@@ -165,8 +173,8 @@ final class CallViewModel {
 
     func endCall() {
         logger.info("[Call] End call tapped")
-        callProgressTask?.cancel()
-        socketConnectionTask?.cancel()
+        callProgressCancelBag.reset()
+        signalingCancelBag.reset()
         useCase.disconnectSignaling()
         useCase.endCall()
         activeCall = nil
@@ -178,32 +186,37 @@ final class CallViewModel {
         role: SignalingRole,
         callID: UUID
     ) {
-        socketConnectionTask?.cancel()
-        socketConnectionTask = Task { [weak self] in
-            guard let self else { return }
+        signalingCancelBag.reset()
+        let useCase = useCase
+        let logger = logger
+        Task { [weak self] in
             do {
                 try await useCase.connectSignaling(
                     preparation: preparation,
                     role: role
                 )
                 guard !Task.isCancelled else { return }
+                guard let self else { return }
                 markSocketAuthenticated(callID: callID, role: role)
             } catch {
                 guard !Task.isCancelled else { return }
+                guard let self else { return }
                 logger.info("[Signaling] WebSocket connection failed: \(error)")
                 activeCall = nil
             }
         }
+        .store(signalingCancelBag)
     }
 
     private func scheduleWebRTCConnected(callID: UUID) {
-        callProgressTask?.cancel()
-        callProgressTask = Task { [weak self] in
+        callProgressCancelBag.reset()
+        Task { [weak self] in
             try? await Task.sleep(for: .seconds(2))
             guard !Task.isCancelled else { return }
             guard let self else { return }
             markWebRTCConnected(callID: callID)
         }
+        .store(callProgressCancelBag)
     }
 
     private func markSocketAuthenticated(

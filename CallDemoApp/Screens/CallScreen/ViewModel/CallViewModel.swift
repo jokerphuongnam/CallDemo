@@ -14,28 +14,13 @@ final class CallViewModel {
     private(set) var canStartOutgoingCall = false
     private(set) var displayUserID = ""
     private(set) var partnerDisplayUserID = ""
-    private(set) var signalingState = SignalingState.idle
-    private(set) var signalingPreparation: SignalingPreparation?
 
     var canUseCallActions: Bool {
-        canStartOutgoingCall && signalingState == .ready
+        canStartOutgoingCall
     }
 
     var canReceiveCall: Bool {
-        hasCurrentUserID && signalingState == .ready
-    }
-
-    var signalingPreparationText: String {
-        switch signalingState {
-        case .idle:
-            "Chưa chuẩn bị WebSocket"
-        case .preparing:
-            "Đang chuẩn bị WebSocket…"
-        case .ready:
-            "Thông tin WebSocket đã sẵn sàng"
-        case .failed:
-            "Chuẩn bị WebSocket thất bại"
-        }
+        hasCurrentUserID
     }
 
     init(useCase: CallUseCaseProtocol, logger: AppLoggerProtocol) {
@@ -63,8 +48,6 @@ final class CallViewModel {
         if didChangeIdentity {
             signalingCancelBag.reset()
             useCase.disconnectSignaling()
-            signalingPreparation = nil
-            signalingState = .idle
         }
         logger.info("[Call] Settings refreshed")
     }
@@ -72,7 +55,7 @@ final class CallViewModel {
     func startCall() {
         logger.info("[Call] Start call tapped")
         guard canUseCallActions else {
-            logger.info("[Call] Start call rejected: signaling is not ready")
+            logger.info("[Call] Start call rejected: missing current or partner ID")
             return
         }
         activeCall = useCase.startOutgoingCall()
@@ -82,50 +65,17 @@ final class CallViewModel {
                 : "[Call] Outgoing call created"
         )
 
-        guard
-            let callID = activeCall?.id,
-            let signalingPreparation
-        else { return }
-        connectSocket(
-            preparation: signalingPreparation,
+        guard let callID = activeCall?.id else { return }
+        prepareAndJoinSignaling(
             role: .caller,
             callID: callID
         )
     }
 
-    func requestSignalingCredentials() {
-        guard signalingState != .preparing else { return }
-        signalingState = .preparing
-        logger.info("[Signaling] Connection information preparation started")
-
-        signalingCancelBag.reset()
-        let useCase = useCase
-        let logger = logger
-        Task { [weak self] in
-            do {
-                let preparation = try await useCase.prepareSignaling()
-                guard !Task.isCancelled else { return }
-                guard let self else { return }
-                signalingPreparation = preparation
-                signalingState = .ready
-                logger.info(
-                    "[Signaling] Connection information ready: "
-                        + preparation.webSocketURL.absoluteString
-                )
-            } catch {
-                guard !Task.isCancelled else { return }
-                guard let self else { return }
-                signalingState = .failed
-                logger.info("[Signaling] Credential request failed: \(error.localizedDescription)")
-            }
-        }
-        .store(signalingCancelBag)
-    }
-
     func receiveCall() {
         logger.info("[Call] Receive call tapped")
         guard canReceiveCall else {
-            logger.info("[Call] Incoming call rejected: signaling is not ready")
+            logger.info("[Call] Incoming call rejected: missing current ID")
             return
         }
         let peerName = partnerDisplayUserID.isEmpty ? "Partner" : partnerDisplayUserID
@@ -136,10 +86,7 @@ final class CallViewModel {
             return
         }
 
-        guard let signalingPreparation else { return }
-        logger.info("[Call] Joining signaling as callee")
-        connectSocket(
-            preparation: signalingPreparation,
+        prepareAndJoinSignaling(
             role: .callee,
             callID: callID
         )
@@ -181,27 +128,24 @@ final class CallViewModel {
         logger.info("[Call] Active call cleared; call screen will dismiss")
     }
 
-    private func connectSocket(
-        preparation: SignalingPreparation,
+    private func prepareAndJoinSignaling(
         role: SignalingRole,
         callID: UUID
     ) {
         signalingCancelBag.reset()
         let useCase = useCase
         let logger = logger
+        logger.info("[Signaling] Preparing connection information for \(role)")
         Task { [weak self] in
             do {
-                try await useCase.connectSignaling(
-                    preparation: preparation,
-                    role: role
-                )
+                try await useCase.joinSignaling(as: role)
                 guard !Task.isCancelled else { return }
                 guard let self else { return }
                 markSocketAuthenticated(callID: callID, role: role)
             } catch {
                 guard !Task.isCancelled else { return }
                 guard let self else { return }
-                logger.info("[Signaling] WebSocket connection failed: \(error)")
+                logger.info("[Signaling] Preparation or WebSocket connection failed: \(error)")
                 activeCall = nil
             }
         }

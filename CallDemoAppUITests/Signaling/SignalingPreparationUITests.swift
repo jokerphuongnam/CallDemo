@@ -1,54 +1,62 @@
 import XCTest
 
 final class SignalingPreparationUITests: CallDemoAppUITestCase {
-    func testCallActionsStayDisabledUntilSignalingIsReady() {
+    func testOutgoingCallPreparesThenJoinsAsCaller() {
         let app = launchConfiguredApp(
             currentUserID: "caller",
-            partnerUserID: "receiver",
-            prepareSignaling: false
+            partnerUserID: "receiver"
         )
         let callButton = app.buttons["home.callButton"]
-        let incomingButton = app.buttons["home.receiveCallButton"]
+        XCTAssertTrue(callButton.isEnabled)
+        callButton.tap()
 
-        XCTAssertFalse(callButton.isEnabled)
-        XCTAssertFalse(incomingButton.isEnabled)
-
-        app.buttons["home.prepareWebSocketButton"].tap()
-        XCTAssertFalse(callButton.isEnabled)
-        XCTAssertFalse(incomingButton.isEnabled)
-
-        let status = app.staticTexts["home.signalingPreparationText"]
+        let status = app.staticTexts["call.statusText"]
+        XCTAssertTrue(status.waitForExistence(timeout: 5))
+        XCTAssertEqual(status.label, "Đang kết nối signaling…")
         XCTAssertTrue(
             waitUntilValue(
                 status,
-                equals: "Thông tin WebSocket đã sẵn sàng",
+                equals: "Đã vào WebSocket với vai trò caller",
                 timeout: 5
             )
         )
-        XCTAssertTrue(waitUntilEnabled(callButton, timeout: 2))
-        XCTAssertTrue(waitUntilEnabled(incomingButton, timeout: 2))
     }
 
-    func testCallActionsStayDisabledWhenSignalingFails() {
+    func testIncomingCallPreparesThenJoinsAsCallee() {
+        let app = launchConfiguredApp(
+            currentUserID: "receiver",
+            partnerUserID: "caller"
+        )
+        let receiveButton = app.buttons["home.receiveCallButton"]
+        XCTAssertTrue(receiveButton.isEnabled)
+        receiveButton.tap()
+
+        let status = app.staticTexts["call.statusText"]
+        XCTAssertTrue(status.waitForExistence(timeout: 5))
+        XCTAssertEqual(status.label, "Đang kết nối signaling…")
+        XCTAssertTrue(
+            waitUntilValue(
+                status,
+                equals: "Đang chờ caller gọi đến…",
+                timeout: 5
+            )
+        )
+    }
+
+    func testCallScreenDismissesWhenAutomaticPreparationFails() {
         let app = launchConfiguredApp(
             currentUserID: "caller",
             partnerUserID: "receiver",
-            prepareSignaling: false,
             signalingResult: "failure"
         )
         let callButton = app.buttons["home.callButton"]
-        let incomingButton = app.buttons["home.receiveCallButton"]
-        app.buttons["home.prepareWebSocketButton"].tap()
+        XCTAssertTrue(callButton.isHittable)
+        callButton.tap()
 
-        let status = app.staticTexts["home.signalingPreparationText"]
-        XCTAssertTrue(
-            waitUntilValue(
-                status,
-                equals: "Chuẩn bị WebSocket thất bại",
-                timeout: 5
-            )
-        )
-        XCTAssertFalse(callButton.isEnabled)
-        XCTAssertFalse(incomingButton.isEnabled)
+        Thread.sleep(forTimeInterval: 1.5)
+        let endButton = app.buttons["call.endButton"]
+        XCTAssertFalse(endButton.exists)
+        XCTAssertTrue(callButton.isHittable)
+        XCTAssertTrue(callButton.isEnabled)
     }
 }

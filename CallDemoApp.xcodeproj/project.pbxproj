@@ -7,31 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = U20000000000000000000001 /* DefaultCallUseCaseTests.swift */; };
-		U10000000000000000000003 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = U90000000000000000000001 /* Cuckoo */; };
-		V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */; };
-		V10000000000000000000002 /* CallActionButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000002 /* CallActionButtonTests.swift */; };
-		V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */; };
-		V10000000000000000000004 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000001 /* Mocker */; };
-		V10000000000000000000005 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000002 /* ViewInspector */; };
-		V10000000000000000000006 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000003 /* SnapshotTesting */; };
-		X10000000000000000000001 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000001 /* CancelBag.swift */; };
-		X10000000000000000000002 /* Cancellable+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000002 /* Cancellable+CancelBag.swift */; };
-		X10000000000000000000003 /* Task+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000003 /* Task+CancelBag.swift */; };
-		X10000000000000000000004 /* CancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000004 /* CancelBagTests.swift */; };
-		Y10000000000000000000001 /* DispatchWorkItem+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */; };
-		Y10000000000000000000002 /* NotificationObserver+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */; };
-		Y10000000000000000000003 /* Timer+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000003 /* Timer+CancelBag.swift */; };
-		Y10000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */; };
-		Y10000000000000000000005 /* CancellableCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000005 /* CancellableCancelBagTests.swift */; };
-		Y10000000000000000000006 /* DispatchWorkItemCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */; };
-		Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */; };
-		Y10000000000000000000008 /* TimerCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000008 /* TimerCancelBagTests.swift */; };
-		Y10000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */; };
-		Z10000000000000000000001 /* AsyncBroadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000001 /* AsyncBroadcast.swift */; };
-		Z10000000000000000000002 /* AsyncBroadcastHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000002 /* AsyncBroadcastHub.swift */; };
-		Z10000000000000000000003 /* AsyncBroadcastStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000003 /* AsyncBroadcastStorage.swift */; };
-		Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000005 /* AsyncBroadcastTests.swift */; };
 		03420A3A6F0B859160178849 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A589BC6F4139DD5E95DF8 /* CallViewModel.swift */; };
 		139DC4ACC6577366658FF931 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE73D1CE7380570B1F8956B /* UserSettings.swift */; };
 		2BB9161E2FD4BD99E1AD834F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E277FC02BB919142328CF16C /* AppDelegate.swift */; };
@@ -62,18 +37,6 @@
 		A80000000000000000000001 /* ConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000001 /* ConfigurationKey.swift */; };
 		A80000000000000000000002 /* Bundle+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* Bundle+Configuration.swift */; };
 		B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 218F0910D4F9435A442648B4 /* SwinjectAutoregistration */; };
-		F10000000000000000000021 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000002 /* NetworkManager */; };
-		F10000000000000000000022 /* NetworkManagerCredentialNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */; };
-		F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */; };
-		F10000000000000000000024 /* SignalingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000011 /* SignalingState.swift */; };
-		F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */; };
-		F10000000000000000000026 /* UITestSignalingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000013 /* UITestSignalingResult.swift */; };
-		F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000014 /* UITestSignalingRepositoryError.swift */; };
-		F10000000000000000000020 /* Blake2 in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000001 /* Blake2 */; };
-		F1000000000000000000000C /* SignalingAuthRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */; };
-		F1000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */; };
-		F1000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */; };
-		W10000000000000000000001 /* SignalingRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = W20000000000000000000001 /* SignalingRole.swift */; };
 		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
 		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
 		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
@@ -98,19 +61,55 @@
 		F10000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */; };
 		F1000000000000000000000A /* NodeBootstrapNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000A /* NodeBootstrapNetworkProtocol.swift */; };
 		F1000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift */; };
+		F1000000000000000000000C /* SignalingAuthRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */; };
+		F1000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */; };
+		F1000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */; };
+		F10000000000000000000020 /* Blake2 in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000001 /* Blake2 */; };
+		F10000000000000000000021 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000002 /* NetworkManager */; };
+		F10000000000000000000022 /* NetworkManagerCredentialNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */; };
+		F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */; };
+		F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */; };
+		F10000000000000000000026 /* UITestSignalingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000013 /* UITestSignalingResult.swift */; };
+		F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000014 /* UITestSignalingRepositoryError.swift */; };
 		F3669B4983E873D204ECB4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D294D68CEF1E2C731A809B /* HomeScreen.swift */; };
 		FBCEFAB86263421176B13E45 /* AppViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407354E6A67A81A6F83918BE /* AppViewFactoryProtocol.swift */; };
+		U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = U20000000000000000000001 /* DefaultCallUseCaseTests.swift */; };
+		U10000000000000000000003 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = U90000000000000000000001 /* Cuckoo */; };
+		V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */; };
+		V10000000000000000000002 /* CallActionButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000002 /* CallActionButtonTests.swift */; };
+		V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */; };
+		V10000000000000000000004 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000001 /* Mocker */; };
+		V10000000000000000000005 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000002 /* ViewInspector */; };
+		V10000000000000000000006 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = V90000000000000000000003 /* SnapshotTesting */; };
+		W10000000000000000000001 /* SignalingRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = W20000000000000000000001 /* SignalingRole.swift */; };
+		X10000000000000000000001 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000001 /* CancelBag.swift */; };
+		X10000000000000000000002 /* Cancellable+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000002 /* Cancellable+CancelBag.swift */; };
+		X10000000000000000000003 /* Task+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000003 /* Task+CancelBag.swift */; };
+		X10000000000000000000004 /* CancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = X20000000000000000000004 /* CancelBagTests.swift */; };
+		Y10000000000000000000001 /* DispatchWorkItem+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */; };
+		Y10000000000000000000002 /* NotificationObserver+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */; };
+		Y10000000000000000000003 /* Timer+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000003 /* Timer+CancelBag.swift */; };
+		Y10000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */; };
+		Y10000000000000000000005 /* CancellableCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000005 /* CancellableCancelBagTests.swift */; };
+		Y10000000000000000000006 /* DispatchWorkItemCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */; };
+		Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */; };
+		Y10000000000000000000008 /* TimerCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000008 /* TimerCancelBagTests.swift */; };
+		Y10000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */; };
+		Z10000000000000000000001 /* AsyncBroadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000001 /* AsyncBroadcast.swift */; };
+		Z10000000000000000000002 /* AsyncBroadcastHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000002 /* AsyncBroadcastHub.swift */; };
+		Z10000000000000000000003 /* AsyncBroadcastStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000003 /* AsyncBroadcastStorage.swift */; };
+		Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Z20000000000000000000005 /* AsyncBroadcastTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		U60000000000000000000001 /* PBXContainerItemProxy */ = {
+		D90000000000000000000009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E9A8B7F37BD101A139284A9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F7EFA573B5075BEF522A17AC;
 			remoteInfo = CallDemoApp;
 		};
-		D90000000000000000000009 /* PBXContainerItemProxy */ = {
+		U60000000000000000000001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E9A8B7F37BD101A139284A9 /* Project object */;
 			proxyType = 1;
@@ -120,28 +119,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		U20000000000000000000001 /* DefaultCallUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseTests.swift; sourceTree = "<group>"; };
-		U20000000000000000000003 /* CallDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCredentialNetworkTests.swift; sourceTree = "<group>"; };
-		V20000000000000000000002 /* CallActionButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButtonTests.swift; sourceTree = "<group>"; };
-		V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRequestSnapshotTests.swift; sourceTree = "<group>"; };
-		X20000000000000000000001 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
-		X20000000000000000000002 /* Cancellable+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cancellable+CancelBag.swift"; sourceTree = "<group>"; };
-		X20000000000000000000003 /* Task+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CancelBag.swift"; sourceTree = "<group>"; };
-		X20000000000000000000004 /* CancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBagTests.swift; sourceTree = "<group>"; };
-		Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchWorkItem+CancelBag.swift"; sourceTree = "<group>"; };
-		Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationObserver+CancelBag.swift"; sourceTree = "<group>"; };
-		Y20000000000000000000003 /* Timer+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CancelBag.swift"; sourceTree = "<group>"; };
-		Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionWebSocketTask+CancelBag.swift"; sourceTree = "<group>"; };
-		Y20000000000000000000005 /* CancellableCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableCancelBagTests.swift; sourceTree = "<group>"; };
-		Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemCancelBagTests.swift; sourceTree = "<group>"; };
-		Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserverCancelBagTests.swift; sourceTree = "<group>"; };
-		Y20000000000000000000008 /* TimerCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCancelBagTests.swift; sourceTree = "<group>"; };
-		Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWebSocketTaskCancelBagTests.swift; sourceTree = "<group>"; };
-		Z20000000000000000000001 /* AsyncBroadcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcast.swift; sourceTree = "<group>"; };
-		Z20000000000000000000002 /* AsyncBroadcastHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastHub.swift; sourceTree = "<group>"; };
-		Z20000000000000000000003 /* AsyncBroadcastStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastStorage.swift; sourceTree = "<group>"; };
-		Z20000000000000000000005 /* AsyncBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastTests.swift; sourceTree = "<group>"; };
 		14D294D68CEF1E2C731A809B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		17669BD341892C5634410056 /* UserIDManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDManagerProtocol.swift; sourceTree = "<group>"; };
 		1CE73D1CE7380570B1F8956B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -189,7 +166,6 @@
 		D92000000000000000000005 /* ManualCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCallUITests.swift; sourceTree = "<group>"; };
 		D92000000000000000000006 /* SignalingPreparationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingPreparationUITests.swift; sourceTree = "<group>"; };
 		E277FC02BB919142328CF16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
 		F20000000000000000000001 /* SignalingCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingCredentials.swift; sourceTree = "<group>"; };
 		F20000000000000000000002 /* CredentialRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRequestNetworkModel.swift; sourceTree = "<group>"; };
 		F20000000000000000000003 /* CredentialResponseNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialResponseNetworkModel.swift; sourceTree = "<group>"; };
@@ -201,30 +177,41 @@
 		F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBootstrapResponseNetworkModel.swift; sourceTree = "<group>"; };
 		F2000000000000000000000A /* NodeBootstrapNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBootstrapNetworkProtocol.swift; sourceTree = "<group>"; };
 		F2000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNodeBootstrapNetworkImpl.swift; sourceTree = "<group>"; };
-		F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerCredentialNetworkProtocol.swift; sourceTree = "<group>"; };
-		F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerNodeNetworkProtocol.swift; sourceTree = "<group>"; };
-		F20000000000000000000011 /* SignalingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingState.swift; sourceTree = "<group>"; };
-		F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryImpl.swift; sourceTree = "<group>"; };
-		F20000000000000000000013 /* UITestSignalingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingResult.swift; sourceTree = "<group>"; };
-		F20000000000000000000014 /* UITestSignalingRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryError.swift; sourceTree = "<group>"; };
 		F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingAuthRequestNetworkModel.swift; sourceTree = "<group>"; };
 		F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingWebSocketNetworkProtocol.swift; sourceTree = "<group>"; };
 		F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignalingWebSocketNetworkImpl.swift; sourceTree = "<group>"; };
+		F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerCredentialNetworkProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerNodeNetworkProtocol.swift; sourceTree = "<group>"; };
+		F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryImpl.swift; sourceTree = "<group>"; };
+		F20000000000000000000013 /* UITestSignalingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingResult.swift; sourceTree = "<group>"; };
+		F20000000000000000000014 /* UITestSignalingRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryError.swift; sourceTree = "<group>"; };
+		F5BFC7F003980845B2F2DA39 /* UserSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		U20000000000000000000001 /* DefaultCallUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallUseCaseTests.swift; sourceTree = "<group>"; };
+		U20000000000000000000003 /* CallDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCredentialNetworkTests.swift; sourceTree = "<group>"; };
+		V20000000000000000000002 /* CallActionButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionButtonTests.swift; sourceTree = "<group>"; };
+		V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialRequestSnapshotTests.swift; sourceTree = "<group>"; };
 		W20000000000000000000001 /* SignalingRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingRole.swift; sourceTree = "<group>"; };
+		X20000000000000000000001 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		X20000000000000000000002 /* Cancellable+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cancellable+CancelBag.swift"; sourceTree = "<group>"; };
+		X20000000000000000000003 /* Task+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CancelBag.swift"; sourceTree = "<group>"; };
+		X20000000000000000000004 /* CancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBagTests.swift; sourceTree = "<group>"; };
+		Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchWorkItem+CancelBag.swift"; sourceTree = "<group>"; };
+		Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationObserver+CancelBag.swift"; sourceTree = "<group>"; };
+		Y20000000000000000000003 /* Timer+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CancelBag.swift"; sourceTree = "<group>"; };
+		Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionWebSocketTask+CancelBag.swift"; sourceTree = "<group>"; };
+		Y20000000000000000000005 /* CancellableCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableCancelBagTests.swift; sourceTree = "<group>"; };
+		Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemCancelBagTests.swift; sourceTree = "<group>"; };
+		Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserverCancelBagTests.swift; sourceTree = "<group>"; };
+		Y20000000000000000000008 /* TimerCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCancelBagTests.swift; sourceTree = "<group>"; };
+		Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWebSocketTaskCancelBagTests.swift; sourceTree = "<group>"; };
+		Z20000000000000000000001 /* AsyncBroadcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcast.swift; sourceTree = "<group>"; };
+		Z20000000000000000000002 /* AsyncBroadcastHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastHub.swift; sourceTree = "<group>"; };
+		Z20000000000000000000003 /* AsyncBroadcastStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastStorage.swift; sourceTree = "<group>"; };
+		Z20000000000000000000005 /* AsyncBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBroadcastTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		U40000000000000000000002 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				U10000000000000000000003 /* Cuckoo in Frameworks */,
-				V10000000000000000000004 /* Mocker in Frameworks */,
-				V10000000000000000000005 /* ViewInspector in Frameworks */,
-				V10000000000000000000006 /* SnapshotTesting in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		87D23CE89DA5A2A612340C66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,116 +230,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		U40000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				U10000000000000000000003 /* Cuckoo in Frameworks */,
+				V10000000000000000000004 /* Mocker in Frameworks */,
+				V10000000000000000000005 /* ViewInspector in Frameworks */,
+				V10000000000000000000006 /* SnapshotTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		U30000000000000000000001 /* CallDemoAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				X30000000000000000000003 /* Utils */,
-				U30000000000000000000002 /* UseCase */,
-				V30000000000000000000001 /* Network */,
-				V30000000000000000000002 /* View */,
-				V30000000000000000000003 /* Snapshot */,
-			);
-			path = CallDemoAppTests;
-			sourceTree = "<group>";
-		};
-		U30000000000000000000002 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				U20000000000000000000001 /* DefaultCallUseCaseTests.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		V30000000000000000000001 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		V30000000000000000000002 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				V20000000000000000000002 /* CallActionButtonTests.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		V30000000000000000000003 /* Snapshot */ = {
-			isa = PBXGroup;
-			children = (
-				V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */,
-			);
-			path = Snapshot;
-			sourceTree = "<group>";
-		};
-		X30000000000000000000001 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				Z30000000000000000000001 /* AsyncBroadcast */,
-				X30000000000000000000002 /* CancelBag */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		X30000000000000000000002 /* CancelBag */ = {
-			isa = PBXGroup;
-			children = (
-				X20000000000000000000001 /* CancelBag.swift */,
-				X20000000000000000000002 /* Cancellable+CancelBag.swift */,
-				X20000000000000000000003 /* Task+CancelBag.swift */,
-				Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */,
-				Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */,
-				Y20000000000000000000003 /* Timer+CancelBag.swift */,
-				Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */,
-			);
-			path = CancelBag;
-			sourceTree = "<group>";
-		};
-		X30000000000000000000003 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				Z30000000000000000000002 /* AsyncBroadcast */,
-				X30000000000000000000004 /* CancelBag */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		X30000000000000000000004 /* CancelBag */ = {
-			isa = PBXGroup;
-			children = (
-				X20000000000000000000004 /* CancelBagTests.swift */,
-				Y20000000000000000000005 /* CancellableCancelBagTests.swift */,
-				Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */,
-				Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */,
-				Y20000000000000000000008 /* TimerCancelBagTests.swift */,
-				Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */,
-			);
-			path = CancelBag;
-			sourceTree = "<group>";
-		};
-		Z30000000000000000000001 /* AsyncBroadcast */ = {
-			isa = PBXGroup;
-			children = (
-				Z20000000000000000000001 /* AsyncBroadcast.swift */,
-				Z20000000000000000000002 /* AsyncBroadcastHub.swift */,
-				Z20000000000000000000003 /* AsyncBroadcastStorage.swift */,
-			);
-			path = AsyncBroadcast;
-			sourceTree = "<group>";
-		};
-		Z30000000000000000000002 /* AsyncBroadcast */ = {
-			isa = PBXGroup;
-			children = (
-				Z20000000000000000000005 /* AsyncBroadcastTests.swift */,
-			);
-			path = AsyncBroadcast;
-			sourceTree = "<group>";
-		};
 		06FC75A51C87C52E292C08B5 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,7 +348,6 @@
 				1CE73D1CE7380570B1F8956B /* UserSettings.swift */,
 				F20000000000000000000001 /* SignalingCredentials.swift */,
 				F20000000000000000000008 /* SignalingPreparation.swift */,
-				F20000000000000000000011 /* SignalingState.swift */,
 				W20000000000000000000001 /* SignalingRole.swift */,
 			);
 			path = Model;
@@ -628,6 +518,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		D93000000000000000000004 /* Signaling */ = {
+			isa = PBXGroup;
+			children = (
+				D92000000000000000000006 /* SignalingPreparationUITests.swift */,
+			);
+			path = Signaling;
+			sourceTree = "<group>";
+		};
 		D93000000000000000000005 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,14 +536,6 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		D93000000000000000000004 /* Signaling */ = {
-			isa = PBXGroup;
-			children = (
-				D92000000000000000000006 /* SignalingPreparationUITests.swift */,
-			);
-			path = Signaling;
-			sourceTree = "<group>";
-		};
 		DF97E2DF024E01766EA9EC03 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +544,34 @@
 				1A53F391377FE3B1E0414FD4 /* Storage */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		E08FA41E7C030D65821CC290 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */,
+				B30000000000000000000003 /* DefaultCallManagerImpl.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		E3C1814D327ABC35C773206A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */,
+				B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EFB221D5FAECABB18C5BF0F7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D5924F8D6C223BA141E07A1F /* CallScreen */,
+				06FC75A51C87C52E292C08B5 /* HomeScreen */,
+				9F758C7F3D26C2259178F428 /* SettingsScreen */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		F30000000000000000000001 /* Network */ = {
@@ -723,34 +641,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E08FA41E7C030D65821CC290 /* Call */ = {
-			isa = PBXGroup;
-			children = (
-				CCFC0E6373984598B4FD866C /* CallManagerProtocol.swift */,
-				B30000000000000000000003 /* DefaultCallManagerImpl.swift */,
-			);
-			path = Call;
-			sourceTree = "<group>";
-		};
-		E3C1814D327ABC35C773206A /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				80EB6DB68C5EFBD454612A38 /* CallUseCaseProtocol.swift */,
-				B10000000000000000000002 /* DefaultCallUseCaseImpl.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		EFB221D5FAECABB18C5BF0F7 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				D5924F8D6C223BA141E07A1F /* CallScreen */,
-				06FC75A51C87C52E292C08B5 /* HomeScreen */,
-				9F758C7F3D26C2259178F428 /* SettingsScreen */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
 		F769CEFC3226A77E16862287 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,34 +649,116 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		U30000000000000000000001 /* CallDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				X30000000000000000000003 /* Utils */,
+				U30000000000000000000002 /* UseCase */,
+				V30000000000000000000001 /* Network */,
+				V30000000000000000000002 /* View */,
+				V30000000000000000000003 /* Snapshot */,
+			);
+			path = CallDemoAppTests;
+			sourceTree = "<group>";
+		};
+		U30000000000000000000002 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				U20000000000000000000001 /* DefaultCallUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000001 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000001 /* URLSessionCredentialNetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000002 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000002 /* CallActionButtonTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		V30000000000000000000003 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				V20000000000000000000003 /* CredentialRequestSnapshotTests.swift */,
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		X30000000000000000000001 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				Z30000000000000000000001 /* AsyncBroadcast */,
+				X30000000000000000000002 /* CancelBag */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		X30000000000000000000002 /* CancelBag */ = {
+			isa = PBXGroup;
+			children = (
+				X20000000000000000000001 /* CancelBag.swift */,
+				X20000000000000000000002 /* Cancellable+CancelBag.swift */,
+				X20000000000000000000003 /* Task+CancelBag.swift */,
+				Y20000000000000000000001 /* DispatchWorkItem+CancelBag.swift */,
+				Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */,
+				Y20000000000000000000003 /* Timer+CancelBag.swift */,
+				Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */,
+			);
+			path = CancelBag;
+			sourceTree = "<group>";
+		};
+		X30000000000000000000003 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				Z30000000000000000000002 /* AsyncBroadcast */,
+				X30000000000000000000004 /* CancelBag */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		X30000000000000000000004 /* CancelBag */ = {
+			isa = PBXGroup;
+			children = (
+				X20000000000000000000004 /* CancelBagTests.swift */,
+				Y20000000000000000000005 /* CancellableCancelBagTests.swift */,
+				Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */,
+				Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */,
+				Y20000000000000000000008 /* TimerCancelBagTests.swift */,
+				Y20000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift */,
+			);
+			path = CancelBag;
+			sourceTree = "<group>";
+		};
+		Z30000000000000000000001 /* AsyncBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				Z20000000000000000000001 /* AsyncBroadcast.swift */,
+				Z20000000000000000000002 /* AsyncBroadcastHub.swift */,
+				Z20000000000000000000003 /* AsyncBroadcastStorage.swift */,
+			);
+			path = AsyncBroadcast;
+			sourceTree = "<group>";
+		};
+		Z30000000000000000000002 /* AsyncBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				Z20000000000000000000005 /* AsyncBroadcastTests.swift */,
+			);
+			path = AsyncBroadcast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		U50000000000000000000001 /* CallDemoAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */;
-			buildPhases = (
-				U40000000000000000000001 /* Sources */,
-				U40000000000000000000002 /* Frameworks */,
-				U40000000000000000000003 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				U60000000000000000000002 /* PBXTargetDependency */,
-				U60000000000000000000003 /* PBXTargetDependency */,
-			);
-			name = CallDemoAppTests;
-			packageProductDependencies = (
-				U90000000000000000000001 /* Cuckoo */,
-				V90000000000000000000001 /* Mocker */,
-				V90000000000000000000002 /* ViewInspector */,
-				V90000000000000000000003 /* SnapshotTesting */,
-			);
-			productName = CallDemoAppTests;
-			productReference = U20000000000000000000003 /* CallDemoAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		D90000000000000000000008 /* CallDemoAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9000000000000000000000D /* Build configuration list for PBXNativeTarget "CallDemoAppUITests" */;
@@ -830,6 +802,31 @@
 			productReference = 736FB4BA5B9B5181DF25EF81 /* CallDemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		U50000000000000000000001 /* CallDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */;
+			buildPhases = (
+				U40000000000000000000001 /* Sources */,
+				U40000000000000000000002 /* Frameworks */,
+				U40000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				U60000000000000000000002 /* PBXTargetDependency */,
+				U60000000000000000000003 /* PBXTargetDependency */,
+			);
+			name = CallDemoAppTests;
+			packageProductDependencies = (
+				U90000000000000000000001 /* Cuckoo */,
+				V90000000000000000000001 /* Mocker */,
+				V90000000000000000000002 /* ViewInspector */,
+				V90000000000000000000003 /* SnapshotTesting */,
+			);
+			productName = CallDemoAppTests;
+			productReference = U20000000000000000000003 /* CallDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -837,7 +834,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2660;
 			};
 			buildConfigurationList = 883D8B47455B5B6828B74F11 /* Build configuration list for PBXProject "CallDemoApp" */;
 			developmentRegion = en;
@@ -871,14 +868,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		U40000000000000000000003 /* Resources */ = {
+		D90000000000000000000007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D90000000000000000000007 /* Resources */ = {
+		U40000000000000000000003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -915,24 +912,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		U40000000000000000000001 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */,
-				U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */,
-				V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */,
-				V10000000000000000000002 /* CallActionButtonTests.swift in Sources */,
-				V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */,
-				X10000000000000000000004 /* CancelBagTests.swift in Sources */,
-				Y10000000000000000000005 /* CancellableCancelBagTests.swift in Sources */,
-				Y10000000000000000000006 /* DispatchWorkItemCancelBagTests.swift in Sources */,
-				Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */,
-				Y10000000000000000000008 /* TimerCancelBagTests.swift in Sources */,
-				Y10000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8E66145EDFC27D5F8DC9239 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -993,7 +972,6 @@
 				F10000000000000000000006 /* SignalingRepositoryProtocol.swift in Sources */,
 				F10000000000000000000007 /* DefaultSignalingRepositoryImpl.swift in Sources */,
 				F10000000000000000000008 /* SignalingPreparation.swift in Sources */,
-				F10000000000000000000024 /* SignalingState.swift in Sources */,
 				F10000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift in Sources */,
 				F1000000000000000000000A /* NodeBootstrapNetworkProtocol.swift in Sources */,
 				F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */,
@@ -1021,9 +999,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		U40000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				Z10000000000000000000005 /* AsyncBroadcastTests.swift in Sources */,
+				U10000000000000000000001 /* DefaultCallUseCaseTests.swift in Sources */,
+				V10000000000000000000001 /* URLSessionCredentialNetworkTests.swift in Sources */,
+				V10000000000000000000002 /* CallActionButtonTests.swift in Sources */,
+				V10000000000000000000003 /* CredentialRequestSnapshotTests.swift in Sources */,
+				X10000000000000000000004 /* CancelBagTests.swift in Sources */,
+				Y10000000000000000000005 /* CancellableCancelBagTests.swift in Sources */,
+				Y10000000000000000000006 /* DispatchWorkItemCancelBagTests.swift in Sources */,
+				Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */,
+				Y10000000000000000000008 /* TimerCancelBagTests.swift in Sources */,
+				Y10000000000000000000009 /* URLSessionWebSocketTaskCancelBagTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D9000000000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
+			targetProxy = D90000000000000000000009 /* PBXContainerItemProxy */;
+		};
 		U60000000000000000000002 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
@@ -1033,54 +1034,16 @@
 			isa = PBXTargetDependency;
 			productRef = U90000000000000000000003 /* CuckooPluginSingleFile */;
 		};
-		D9000000000000000000000A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7EFA573B5075BEF522A17AC /* CallDemoApp */;
-			targetProxy = D90000000000000000000009 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		U70000000000000000000001 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
-			};
-			name = Debug;
-		};
-		U70000000000000000000002 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
-			};
-			name = Release;
-		};
 		21D31BB391420060DA64CBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B70000000000000000000001 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CallDemoApp/Config/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1132,6 +1095,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1152,6 +1116,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1164,6 +1129,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CallDemoApp/Config/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1247,6 +1213,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1260,24 +1227,50 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
+		U70000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
+			};
+			name = Debug;
+		};
+		U70000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.southmate.demo.CallDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CallDemoApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				U70000000000000000000001 /* Debug */,
-				U70000000000000000000002 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		3900C7FC55E6B3E1458FD282 /* Build configuration list for PBXNativeTarget "CallDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1305,15 +1298,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		U80000000000000000000003 /* Build configuration list for PBXNativeTarget "CallDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				U70000000000000000000001 /* Debug */,
+				U70000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
 		F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tesseract-one/Blake2.swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.0;
+			};
+		};
+		F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jokerphuongnam/NetworkManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
 			};
 		};
 		U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
@@ -1348,37 +1374,28 @@
 				minimumVersion = 1.19.2;
 			};
 		};
-		F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jokerphuongnam/NetworkManager.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
-			};
-		};
-		5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
-		A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		218F0910D4F9435A442648B4 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		76435CAB8F8C75EC8EAF60E5 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		F50000000000000000000001 /* Blake2 */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */;
 			productName = Blake2;
+		};
+		F50000000000000000000002 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			productName = NetworkManager;
 		};
 		U90000000000000000000001 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1404,21 +1421,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
-		};
-		F50000000000000000000002 /* NetworkManager */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */;
-			productName = NetworkManager;
-		};
-		218F0910D4F9435A442648B4 /* SwinjectAutoregistration */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
-			productName = SwinjectAutoregistration;
-		};
-		76435CAB8F8C75EC8EAF60E5 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

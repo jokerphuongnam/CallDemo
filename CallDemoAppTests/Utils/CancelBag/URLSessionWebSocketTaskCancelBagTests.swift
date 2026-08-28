@@ -12,8 +12,9 @@ struct URLSessionWebSocketTaskCancelBagTests {
         )
 
         task.store(bag)
-        task.resume()
         bag.reset()
+
+        #expect(bag.isEmpty)
 
         for _ in 0..<20 {
             guard task.state != .canceling && task.state != .completed else { break }

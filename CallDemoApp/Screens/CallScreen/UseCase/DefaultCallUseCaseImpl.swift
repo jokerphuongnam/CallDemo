@@ -35,16 +35,9 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
         userIDManager.displayID(from: settings.partnerUserID)
     }
 
-    func prepareSignaling() async throws -> SignalingPreparation {
+    func joinSignaling(as role: SignalingRole) async throws {
         let currentUserID = userIDManager.signalingID(from: settings.currentUserID)
-        return try await signalingRepository.prepare(userID: currentUserID)
-    }
-
-    func connectSignaling(
-        preparation: SignalingPreparation,
-        role: SignalingRole
-    ) async throws {
-        let currentUserID = userIDManager.signalingID(from: settings.currentUserID)
+        let preparation = try await signalingRepository.prepare(userID: currentUserID)
         try await signalingRepository.connect(
             preparation: preparation,
             userID: currentUserID,

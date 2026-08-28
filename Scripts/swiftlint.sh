@@ -17,7 +17,13 @@ else
     exit 1
 fi
 
-"$swiftlint_path" lint \
-    --config "$project_root/.swiftlint.yml" \
-    --no-cache \
-    --strict
+for lint_path in \
+    "$project_root/CallDemoApp" \
+    "$project_root/CallDemoAppTests" \
+    "$project_root/CallDemoAppUITests"; do
+    "$swiftlint_path" lint \
+        --config "$project_root/.swiftlint.yml" \
+        --no-cache \
+        --strict \
+        "$lint_path"
+done

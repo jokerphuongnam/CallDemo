@@ -15,7 +15,6 @@ class CallDemoAppUITestCase: XCTestCase {
     func launchConfiguredApp(
         currentUserID: String,
         partnerUserID: String? = nil,
-        prepareSignaling shouldPrepareSignaling: Bool = true,
         signalingResult: String = "success"
     ) -> XCUIApplication {
         let app = XCUIApplication()
@@ -43,27 +42,9 @@ class CallDemoAppUITestCase: XCTestCase {
         let saveButton = app.buttons["settings.saveButton"]
         XCTAssertTrue(saveButton.isEnabled)
         saveButton.tap()
+        XCTAssertTrue(waitUntilNotExists(currentUserIDField, timeout: 5))
 
-        if shouldPrepareSignaling {
-            prepareSignaling(in: app)
-        }
         return app
-    }
-
-    func prepareSignaling(in app: XCUIApplication) {
-        let prepareButton = app.buttons["home.prepareWebSocketButton"]
-        XCTAssertTrue(prepareButton.waitForExistence(timeout: 5))
-        XCTAssertTrue(prepareButton.isEnabled)
-        prepareButton.tap()
-
-        let status = app.staticTexts["home.signalingPreparationText"]
-        XCTAssertTrue(
-            waitUntilValue(
-                status,
-                equals: "Thông tin WebSocket đã sẵn sàng",
-                timeout: 5
-            )
-        )
     }
 
     func configureUserIDsIfProvided(in app: XCUIApplication) {
@@ -108,6 +89,12 @@ class CallDemoAppUITestCase: XCTestCase {
 
     func waitUntilEnabled(_ element: XCUIElement, timeout: TimeInterval) -> Bool {
         let predicate = NSPredicate(format: "enabled == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
+        return XCTWaiter.wait(for: [expectation], timeout: timeout) == .completed
+    }
+
+    func waitUntilNotExists(_ element: XCUIElement, timeout: TimeInterval) -> Bool {
+        let predicate = NSPredicate(format: "exists == false")
         let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
         return XCTWaiter.wait(for: [expectation], timeout: timeout) == .completed
     }

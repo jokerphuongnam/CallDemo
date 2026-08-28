@@ -39,6 +39,7 @@ final class UITestSignalingRepositoryImpl: SignalingRepositoryProtocol {
     }
 
     private func prepareResult() async throws {
+        try await Task.sleep(for: .seconds(1))
         if result == .failure {
             throw UITestSignalingRepositoryError.simulatedFailure
         }

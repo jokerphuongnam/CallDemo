@@ -20,6 +20,16 @@ final class UITestSignalingRepositoryImpl: SignalingRepositoryProtocol {
         )
     }
 
+    func connect(
+        preparation: SignalingPreparation,
+        userID: String,
+        role: SignalingRole
+    ) async throws {
+        try await prepareResult()
+    }
+
+    func disconnect() {}
+
     private var credentials: SignalingCredentials {
         SignalingCredentials(
             token: "ui-test-token",

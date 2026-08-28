@@ -59,6 +59,10 @@ enum AppContainer {
                 session: resolver.resolveRequired(NetworkSession.self)
             )
         }
+        container.autoregister(
+            SignalingWebSocketNetworkProtocol.self,
+            initializer: DefaultSignalingWebSocketNetworkImpl.init
+        )
     }
 
     private static func makeUserDefaults() -> UserDefaults {

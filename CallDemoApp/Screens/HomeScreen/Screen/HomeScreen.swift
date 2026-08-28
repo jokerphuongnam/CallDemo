@@ -47,13 +47,13 @@ struct HomeScreen: View {
                         .disabled(!callViewModel.canUseCallActions)
                         .animation(.smooth, value: callViewModel.canUseCallActions)
 
-                        Button("Giả lập cuộc gọi đến", systemImage: "phone.arrow.down.left") {
+                        Button("Nhận cuộc gọi", systemImage: "phone.arrow.down.left") {
                             callViewModel.receiveCall()
                         }
-                        .accessibilityIdentifier("home.simulateIncomingButton")
+                        .accessibilityIdentifier("home.receiveCallButton")
                         .buttonStyle(.glass)
-                        .disabled(!callViewModel.canUseCallActions)
-                        .animation(.smooth, value: callViewModel.canUseCallActions)
+                        .disabled(!callViewModel.canReceiveCall)
+                        .animation(.smooth, value: callViewModel.canReceiveCall)
                     }
                 }
             }

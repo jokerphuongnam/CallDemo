@@ -58,6 +58,8 @@ struct CallScreen: View {
     private var callStatus: String {
         switch call?.phase {
         case .waitingForPeer: "Đang kết nối signaling…"
+        case .waitingForCallee: "Đã vào WebSocket với vai trò caller"
+        case .waitingForIncomingCall: "Đang chờ caller gọi đến…"
         case .ringing:
             call?.direction == .incoming ? "Cuộc gọi đến" : "Đang đổ chuông…"
         case .connecting: "Đang kết nối WebRTC…"

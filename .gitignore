@@ -1,6 +1,7 @@
 .DS_Store
 xcuserdata/
 DerivedData/
+build/
 .ui-test-artifacts/
 .agents/
 *.xcuserstate

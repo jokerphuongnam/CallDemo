@@ -52,6 +52,11 @@
 		F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */; };
 		F10000000000000000000026 /* UITestSignalingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000013 /* UITestSignalingResult.swift */; };
 		F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000014 /* UITestSignalingRepositoryError.swift */; };
+		F10000000000000000000020 /* Blake2 in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000001 /* Blake2 */; };
+		F1000000000000000000000C /* SignalingAuthRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */; };
+		F1000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */; };
+		F1000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */; };
+		W10000000000000000000001 /* SignalingRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = W20000000000000000000001 /* SignalingRole.swift */; };
 		C0466D5331A29753925896FD /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A0527229418DF7B11DA0C /* CallScreen.swift */; };
 		C29C4D6ABCB39C9B61C9E7D7 /* CallDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6852C3D7AD97AF19F04EE610 /* CallDemoApp.swift */; };
 		C90847406FD9E7E9F8B13274 /* SettingsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E253FA4A5A338CCD2ED6849 /* SettingsUseCaseProtocol.swift */; };
@@ -168,6 +173,10 @@
 		F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryImpl.swift; sourceTree = "<group>"; };
 		F20000000000000000000013 /* UITestSignalingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingResult.swift; sourceTree = "<group>"; };
 		F20000000000000000000014 /* UITestSignalingRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSignalingRepositoryError.swift; sourceTree = "<group>"; };
+		F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingAuthRequestNetworkModel.swift; sourceTree = "<group>"; };
+		F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingWebSocketNetworkProtocol.swift; sourceTree = "<group>"; };
+		F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSignalingWebSocketNetworkImpl.swift; sourceTree = "<group>"; };
+		W20000000000000000000001 /* SignalingRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalingRole.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10000000000000000000020 /* Blake2 in Frameworks */,
 				F10000000000000000000021 /* NetworkManager in Frameworks */,
 				A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */,
 				B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */,
@@ -350,6 +360,7 @@
 				F20000000000000000000001 /* SignalingCredentials.swift */,
 				F20000000000000000000008 /* SignalingPreparation.swift */,
 				F20000000000000000000011 /* SignalingState.swift */,
+				W20000000000000000000001 /* SignalingRole.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +562,7 @@
 			children = (
 				F30000000000000000000002 /* Credential */,
 				F30000000000000000000004 /* NodeBootstrap */,
+				F30000000000000000000006 /* Signaling */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -590,6 +602,24 @@
 			isa = PBXGroup;
 			children = (
 				F20000000000000000000009 /* NodeBootstrapResponseNetworkModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000006 /* Signaling */ = {
+			isa = PBXGroup;
+			children = (
+				F2000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift */,
+				F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */,
+				F30000000000000000000007 /* Model */,
+			);
+			path = Signaling;
+			sourceTree = "<group>";
+		};
+		F30000000000000000000007 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2000000000000000000000C /* SignalingAuthRequestNetworkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -692,6 +722,7 @@
 			);
 			name = CallDemoApp;
 			packageProductDependencies = (
+				F50000000000000000000001 /* Blake2 */,
 				F50000000000000000000002 /* NetworkManager */,
 				76435CAB8F8C75EC8EAF60E5 /* Swinject */,
 				218F0910D4F9435A442648B4 /* SwinjectAutoregistration */,
@@ -723,6 +754,7 @@
 				V90000000000000000000004 /* XCRemoteSwiftPackageReference "Mocker" */,
 				V90000000000000000000005 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */,
 				F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 				A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */,
 				5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
@@ -852,6 +884,10 @@
 				F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */,
 				F10000000000000000000026 /* UITestSignalingResult.swift in Sources */,
 				F10000000000000000000027 /* UITestSignalingRepositoryError.swift in Sources */,
+				F1000000000000000000000C /* SignalingAuthRequestNetworkModel.swift in Sources */,
+				F1000000000000000000000D /* SignalingWebSocketNetworkProtocol.swift in Sources */,
+				F1000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift in Sources */,
+				W10000000000000000000001 /* SignalingRole.swift in Sources */,
 				F1000000000000000000000B /* URLSessionNodeBootstrapNetworkImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1156,6 +1192,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tesseract-one/Blake2.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
@@ -1215,6 +1259,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F50000000000000000000001 /* Blake2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */;
+			productName = Blake2;
+		};
 		U90000000000000000000001 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */;

@@ -40,6 +40,18 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
         return try await signalingRepository.prepare(userID: currentUserID)
     }
 
+    func connectSignaling(
+        preparation: SignalingPreparation,
+        role: SignalingRole
+    ) async throws {
+        let currentUserID = userIDManager.signalingID(from: settings.currentUserID)
+        try await signalingRepository.connect(
+            preparation: preparation,
+            userID: currentUserID,
+            role: role
+        )
+    }
+
     func startOutgoingCall() -> ActiveCall? {
         guard canStartOutgoingCall else { return nil }
         let settings = settings
@@ -64,6 +76,10 @@ final class DefaultCallUseCaseImpl: CallUseCaseProtocol {
 
     func endCall() {
         callManager.endCall()
+    }
+
+    func disconnectSignaling() {
+        signalingRepository.disconnect()
     }
 
     private var settings: UserSettings {

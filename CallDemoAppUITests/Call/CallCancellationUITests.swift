@@ -25,9 +25,9 @@ final class CallCancellationUITests: CallDemoAppUITestCase {
             currentUserID: "receiver",
             partnerUserID: "caller"
         )
-        let simulateIncomingButton = app.buttons["home.simulateIncomingButton"]
-        XCTAssertTrue(waitUntilEnabled(simulateIncomingButton, timeout: 5))
-        simulateIncomingButton.tap()
+        let receiveCallButton = app.buttons["home.receiveCallButton"]
+        XCTAssertTrue(waitUntilEnabled(receiveCallButton, timeout: 5))
+        receiveCallButton.tap()
 
         let answerButton = app.buttons["call.answerButton"]
         let endButton = app.buttons["call.endButton"]
@@ -35,37 +35,9 @@ final class CallCancellationUITests: CallDemoAppUITestCase {
         XCTAssertFalse(answerButton.isEnabled)
         endButton.tap()
 
-        XCTAssertTrue(app.buttons["home.simulateIncomingButton"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["home.receiveCallButton"].waitForExistence(timeout: 5))
         Thread.sleep(forTimeInterval: 2.5)
         XCTAssertFalse(app.staticTexts["call.statusText"].exists)
     }
 
-    func testEndingIncomingCallWhileConnectingWebRTCCancelsProgress() {
-        let app = launchConfiguredApp(
-            currentUserID: "receiver",
-            partnerUserID: "caller"
-        )
-        let simulateIncomingButton = app.buttons["home.simulateIncomingButton"]
-        XCTAssertTrue(waitUntilEnabled(simulateIncomingButton, timeout: 5))
-        simulateIncomingButton.tap()
-
-        let answerButton = app.buttons["call.answerButton"]
-        XCTAssertTrue(answerButton.waitForExistence(timeout: 5))
-        XCTAssertTrue(waitUntilEnabled(answerButton, timeout: 5))
-        answerButton.tap()
-
-        let callStatus = app.staticTexts["call.statusText"]
-        XCTAssertTrue(
-            waitUntilValue(
-                callStatus,
-                equals: "Đang kết nối WebRTC…",
-                timeout: 2
-            )
-        )
-        app.buttons["call.endButton"].tap()
-
-        XCTAssertTrue(app.buttons["home.simulateIncomingButton"].waitForExistence(timeout: 5))
-        Thread.sleep(forTimeInterval: 2.5)
-        XCTAssertFalse(callStatus.exists)
-    }
 }

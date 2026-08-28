@@ -21,7 +21,7 @@ final class SettingsUITests: CallDemoAppUITestCase {
         app.launch()
 
         let callButton = app.buttons["home.callButton"]
-        let incomingButton = app.buttons["home.simulateIncomingButton"]
+        let incomingButton = app.buttons["home.receiveCallButton"]
         XCTAssertTrue(callButton.waitForExistence(timeout: 10))
         XCTAssertTrue(incomingButton.exists)
         XCTAssertFalse(callButton.isEnabled)

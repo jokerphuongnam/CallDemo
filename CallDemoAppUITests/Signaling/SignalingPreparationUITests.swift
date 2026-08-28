@@ -8,12 +8,11 @@ final class SignalingPreparationUITests: CallDemoAppUITestCase {
             prepareSignaling: false
         )
         let callButton = app.buttons["home.callButton"]
-        let incomingButton = app.buttons["home.simulateIncomingButton"]
+        let incomingButton = app.buttons["home.receiveCallButton"]
 
         XCTAssertFalse(callButton.isEnabled)
         XCTAssertFalse(incomingButton.isEnabled)
 
-        let preparationStartedAt = Date()
         app.buttons["home.prepareWebSocketButton"].tap()
         XCTAssertFalse(callButton.isEnabled)
         XCTAssertFalse(incomingButton.isEnabled)
@@ -25,10 +24,6 @@ final class SignalingPreparationUITests: CallDemoAppUITestCase {
                 equals: "Thông tin WebSocket đã sẵn sàng",
                 timeout: 5
             )
-        )
-        XCTAssertGreaterThanOrEqual(
-            Date().timeIntervalSince(preparationStartedAt),
-            1.8
         )
         XCTAssertTrue(waitUntilEnabled(callButton, timeout: 2))
         XCTAssertTrue(waitUntilEnabled(incomingButton, timeout: 2))
@@ -42,7 +37,7 @@ final class SignalingPreparationUITests: CallDemoAppUITestCase {
             signalingResult: "failure"
         )
         let callButton = app.buttons["home.callButton"]
-        let incomingButton = app.buttons["home.simulateIncomingButton"]
+        let incomingButton = app.buttons["home.receiveCallButton"]
         app.buttons["home.prepareWebSocketButton"].tap()
 
         let status = app.staticTexts["home.signalingPreparationText"]

@@ -1,15 +1,19 @@
+import Blake2
 import Foundation
 
 final class DefaultSignalingRepositoryImpl: SignalingRepositoryProtocol {
     private let credentialNetwork: CredentialNetworkProtocol
     private let nodeBootstrapNetwork: NodeBootstrapNetworkProtocol
+    private let webSocketNetwork: SignalingWebSocketNetworkProtocol
 
     init(
         credentialNetwork: CredentialNetworkProtocol,
-        nodeBootstrapNetwork: NodeBootstrapNetworkProtocol
+        nodeBootstrapNetwork: NodeBootstrapNetworkProtocol,
+        webSocketNetwork: SignalingWebSocketNetworkProtocol
     ) {
         self.credentialNetwork = credentialNetwork
         self.nodeBootstrapNetwork = nodeBootstrapNetwork
+        self.webSocketNetwork = webSocketNetwork
     }
 
     func requestCredentials(userID: String) async throws -> SignalingCredentials {
@@ -33,6 +37,32 @@ final class DefaultSignalingRepositoryImpl: SignalingRepositoryProtocol {
             webSocketURL: webSocketURL,
             credentials: credentials
         )
+    }
+
+    func connect(
+        preparation: SignalingPreparation,
+        userID: String,
+        role: SignalingRole
+    ) async throws {
+        let address = try signalingAddress(for: userID)
+        try await webSocketNetwork.connect(
+            to: preparation.webSocketURL,
+            authRequest: SignalingAuthRequestNetworkModel(
+                token: preparation.credentials.token,
+                addr: address
+            ),
+            role: role
+        )
+    }
+
+    func disconnect() {
+        webSocketNetwork.disconnect()
+    }
+
+    private func signalingAddress(for userID: String) throws -> String {
+        let normalizedUserID = userID.trimmingCharacters(in: .whitespacesAndNewlines)
+        let hash = try Blake2b.hash(size: 20, data: Data(normalizedUserID.utf8))
+        return hash.map { String(format: "%02x", $0) }.joined()
     }
 
     private func entryWebSocketURL(

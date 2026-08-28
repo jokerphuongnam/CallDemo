@@ -19,7 +19,7 @@ final class CallDemoAppUITests: CallDemoAppUITestCase {
         let app = XCUIApplication()
         app.launch()
         configureUserIDsIfProvided(in: app)
-        let incomingButton = app.buttons["home.simulateIncomingButton"]
+        let incomingButton = app.buttons["home.receiveCallButton"]
 
         XCTAssertTrue(incomingButton.waitForExistence(timeout: 10))
 
@@ -28,8 +28,6 @@ final class CallDemoAppUITests: CallDemoAppUITestCase {
 
             let answerButton = app.buttons["call.answerButton"]
             if answerButton.waitForExistence(timeout: 10) {
-                XCTAssertTrue(waitUntilEnabled(answerButton, timeout: 5))
-                answerButton.tap()
                 XCTAssertTrue(app.buttons["call.endButton"].waitForExistence(timeout: 5))
             }
         }

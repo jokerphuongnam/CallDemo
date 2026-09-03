@@ -4,6 +4,9 @@ DerivedData/
 build/
 .ui-test-artifacts/
 .agents/
+.grok/
+.codex/
+.claude/
 *.xcuserstate
 
 # Local environment configuration

@@ -6,8 +6,8 @@ import Observation
 final class CallViewModel {
     private let useCase: CallUseCaseProtocol
     private let logger: AppLoggerProtocol
-    @ObservationIgnored private let callProgressCancelBag = CancelBag()
-    @ObservationIgnored private let signalingCancelBag = CancelBag()
+    @ObservationIgnored @CancellableCancelBag private var callProgressCancelBag = CancelBag()
+    @ObservationIgnored @CancellableCancelBag private var signalingCancelBag = CancelBag()
 
     var activeCall: ActiveCall?
     private(set) var hasCurrentUserID = false
@@ -132,7 +132,6 @@ final class CallViewModel {
         role: SignalingRole,
         callID: UUID
     ) {
-        signalingCancelBag.reset()
         let useCase = useCase
         let logger = logger
         logger.info("[Signaling] Preparing connection information for \(role)")
@@ -153,7 +152,6 @@ final class CallViewModel {
     }
 
     private func scheduleWebRTCConnected(callID: UUID) {
-        callProgressCancelBag.reset()
         Task { [weak self] in
             try? await Task.sleep(for: .seconds(2))
             guard !Task.isCancelled else { return }

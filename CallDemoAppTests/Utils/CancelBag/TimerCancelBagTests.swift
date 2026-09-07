@@ -13,4 +13,18 @@ struct TimerCancelBagTests {
 
         #expect(!timer.isValid)
     }
+
+    @Test("Storing a new timer accumulates with the previous one")
+    func storeAccumulatesTimers() {
+        let bag = CancelBag()
+        let firstTimer = Timer(timeInterval: 60, repeats: false) { _ in }
+        let secondTimer = Timer(timeInterval: 60, repeats: false) { _ in }
+
+        firstTimer.store(bag)
+        secondTimer.store(bag)
+
+        #expect(firstTimer.isValid)
+        #expect(secondTimer.isValid)
+        #expect(bag.count == 2)
+    }
 }

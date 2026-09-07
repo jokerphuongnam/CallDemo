@@ -4,6 +4,7 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
     private let session: URLSession
     private let rawMessageContinuation: AsyncStream<String>.Continuation
     let rawMessages: AsyncStream<String>
+    /// Accumulate: WebSocket task + receive loop must live together.
     private let cancelBag = CancelBag()
     private var task: URLSessionWebSocketTask?
 
@@ -62,7 +63,6 @@ final class DefaultSignalingWebSocketNetworkImpl: SignalingWebSocketNetworkProto
     }
 
     private func startReceiveLoop(task: URLSessionWebSocketTask) {
-        cancelBag.reset()
         Task { [weak self] in
             while !Task.isCancelled {
                 do {

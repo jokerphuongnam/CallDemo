@@ -22,4 +22,19 @@ struct URLSessionWebSocketTaskCancelBagTests {
         }
         #expect(task.state == .canceling || task.state == .completed)
     }
+
+    @Test("Storing a new WebSocket task accumulates with the previous one")
+    func storeAccumulatesWebSocketTasks() async throws {
+        let bag = CancelBag()
+        let url = try #require(URL(string: "wss://example.invalid"))
+        let firstTask = URLSession.shared.webSocketTask(with: url)
+        let secondTask = URLSession.shared.webSocketTask(with: url)
+
+        firstTask.store(bag)
+        secondTask.store(bag)
+
+        #expect(bag.count == 2)
+        #expect(firstTask.state != .canceling && firstTask.state != .completed)
+        #expect(secondTask.state != .canceling && secondTask.state != .completed)
+    }
 }

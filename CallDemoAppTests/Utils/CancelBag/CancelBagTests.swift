@@ -42,6 +42,10 @@ struct CancelBagTests {
         firstChildBag.store(parentBag)
         secondChildBag.store(parentBag)
 
+        #expect(parentBag.count == 2)
+        #expect(!firstTask.isCancelled)
+        #expect(!secondTask.isCancelled)
+
         parentBag.cancel()
 
         #expect(parentBag.isEmpty)
@@ -72,6 +76,36 @@ struct CancelBagTests {
         #expect(removedTask.isCancelled)
         #expect(!remainingTask.isCancelled)
         #expect(parentBag.count == 1)
+    }
+
+    @Test("Storing new work accumulates without cancelling previous work")
+    func storeAccumulatesWork() {
+        let bag = CancelBag()
+        let firstTask = makeLongRunningTask()
+        let secondTask = makeLongRunningTask()
+
+        firstTask.store(bag)
+        secondTask.store(bag)
+
+        #expect(!firstTask.isCancelled)
+        #expect(!secondTask.isCancelled)
+        #expect(bag.count == 2)
+    }
+
+    @Test("Storing new work on a parent keeps a nested child bag")
+    func storeOnParentKeepsNestedChild() {
+        let parentBag = CancelBag()
+        let childBag = CancelBag()
+        let childTask = makeLongRunningTask()
+        let parentTask = makeLongRunningTask()
+
+        childTask.store(childBag)
+        childBag.store(parentBag)
+        parentTask.store(parentBag)
+
+        #expect(!childTask.isCancelled)
+        #expect(!parentTask.isCancelled)
+        #expect(parentBag.count == 2)
     }
 
     @Test("A completed task removes itself from the bag")

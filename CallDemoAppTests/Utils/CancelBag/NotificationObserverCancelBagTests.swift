@@ -24,4 +24,35 @@ struct NotificationObserverCancelBagTests {
 
         #expect(receivedNotificationCount == 1)
     }
+
+    @Test("Storing a new observer accumulates with the previous one")
+    func storeAccumulatesObservers() {
+        let center = NotificationCenter()
+        let name = Notification.Name("CancelBagTests.notification.accumulate")
+        let bag = CancelBag()
+        var firstReceivedCount = 0
+        var secondReceivedCount = 0
+        let firstObserver = center.addObserver(
+            forName: name,
+            object: nil,
+            queue: nil
+        ) { _ in
+            firstReceivedCount += 1
+        }
+        let secondObserver = center.addObserver(
+            forName: name,
+            object: nil,
+            queue: nil
+        ) { _ in
+            secondReceivedCount += 1
+        }
+
+        firstObserver.store(bag, center: center)
+        secondObserver.store(bag, center: center)
+        center.post(name: name, object: nil)
+
+        #expect(firstReceivedCount == 1)
+        #expect(secondReceivedCount == 1)
+        #expect(bag.count == 2)
+    }
 }

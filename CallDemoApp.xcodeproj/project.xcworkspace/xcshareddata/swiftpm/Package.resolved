@@ -1,5 +1,5 @@
 {
-  "originHash" : "1a25499c1542dcba0599b12399ae19ad111734aa4701c42f83083d56067e30ab",
+  "originHash" : "5bf0fc4cb0abf9a8d22320f758344c3e0af3955f25f2b89c3b0b197535053f20",
   "pins" : [
     {
       "identity" : "aexml",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "29c55c8fe42d6661e5a32cc5bbbad1fff64fd01e",
         "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "cancelbag",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jokerphuongnam/CancelBag",
+      "state" : {
+        "revision" : "1cd5551d2968e453e3006afe156e80f657f4f8aa",
+        "version" : "1.0.0"
       }
     },
     {

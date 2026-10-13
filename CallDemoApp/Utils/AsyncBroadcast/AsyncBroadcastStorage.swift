@@ -1,3 +1,4 @@
+import CancelBag
 import Foundation
 
 final class AsyncBroadcastStorage<Element>: @unchecked Sendable {

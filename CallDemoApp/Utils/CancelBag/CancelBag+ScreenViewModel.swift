@@ -1,3 +1,5 @@
+import CancelBag
+import Combine
 import ScreenViewModel
 
 public extension CancelBag {
@@ -14,11 +16,11 @@ public extension CancelBag {
     /// Cancelling this bag also cancels the screen effect stored under `id`.
     @discardableResult
     func store<Action>(_ model: ScreenModel<Action>, id: some Hashable) -> Int {
-        insert { [weak model] in
+        AnyCancellable { [weak model] in
             let model = model
             Task { @MainActor in
                 model?.cancel(id)
             }
-        }
+        }.store(self)
     }
 }

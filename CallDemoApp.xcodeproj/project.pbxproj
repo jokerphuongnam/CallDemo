@@ -91,6 +91,7 @@
 		Y10000000000000000000002 /* NotificationObserver+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */; };
 		Y10000000000000000000003 /* Timer+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000003 /* Timer+CancelBag.swift */; };
 		Y10000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */; };
+		Y10000000000000000000014 /* CancelBag+ScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000014 /* CancelBag+ScreenViewModel.swift */; };
 		Y10000000000000000000005 /* CancellableCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000005 /* CancellableCancelBagTests.swift */; };
 		Y10000000000000000000006 /* DispatchWorkItemCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */; };
 		Y10000000000000000000007 /* NotificationObserverCancelBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */; };
@@ -205,6 +206,7 @@
 		Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationObserver+CancelBag.swift"; sourceTree = "<group>"; };
 		Y20000000000000000000003 /* Timer+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CancelBag.swift"; sourceTree = "<group>"; };
 		Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionWebSocketTask+CancelBag.swift"; sourceTree = "<group>"; };
+		Y20000000000000000000014 /* CancelBag+ScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CancelBag+ScreenViewModel.swift"; sourceTree = "<group>"; };
 		Y20000000000000000000005 /* CancellableCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableCancelBagTests.swift; sourceTree = "<group>"; };
 		Y20000000000000000000006 /* DispatchWorkItemCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemCancelBagTests.swift; sourceTree = "<group>"; };
 		Y20000000000000000000007 /* NotificationObserverCancelBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserverCancelBagTests.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				Y20000000000000000000002 /* NotificationObserver+CancelBag.swift */,
 				Y20000000000000000000003 /* Timer+CancelBag.swift */,
 				Y20000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift */,
+				Y20000000000000000000014 /* CancelBag+ScreenViewModel.swift */,
 			);
 			path = CancelBag;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				Y10000000000000000000002 /* NotificationObserver+CancelBag.swift in Sources */,
 				Y10000000000000000000003 /* Timer+CancelBag.swift in Sources */,
 				Y10000000000000000000004 /* URLSessionWebSocketTask+CancelBag.swift in Sources */,
+				Y10000000000000000000014 /* CancelBag+ScreenViewModel.swift in Sources */,
 				842405F47D52B44767B234A4 /* ActiveCall.swift in Sources */,
 				A20000000000000000000001 /* CallDirection.swift in Sources */,
 				A20000000000000000000002 /* CallPhase.swift in Sources */,

@@ -25,7 +25,7 @@ struct HomeScreen: View {
                 GlassEffectContainer(spacing: 16) {
                     VStack(spacing: 16) {
                         Button(callButtonTitle, systemImage: "phone.fill") {
-                            callViewModel.startCall()
+                            callViewModel.send(.startCall)
                         }
                         .accessibilityIdentifier("home.callButton")
                         .buttonStyle(.glassProminent)
@@ -33,7 +33,7 @@ struct HomeScreen: View {
                         .animation(.smooth, value: callViewModel.canUseCallActions)
 
                         Button("Nhận cuộc gọi", systemImage: "phone.arrow.down.left") {
-                            callViewModel.receiveCall()
+                            callViewModel.send(.receiveCall)
                         }
                         .accessibilityIdentifier("home.receiveCallButton")
                         .buttonStyle(.glass)
@@ -65,7 +65,7 @@ struct HomeScreen: View {
             isPresented: $isShowingSettings,
             onDismiss: {
                 withAnimation(.smooth) {
-                    callViewModel.refreshSettings()
+                    callViewModel.send(.refreshSettings)
                 }
             },
             content: viewFactory.makeSettingsView
@@ -73,8 +73,8 @@ struct HomeScreen: View {
         .fullScreenCover(item: $callViewModel.activeCall) { _ in
             viewFactory.makeCallScreen(
                 for: $callViewModel.activeCall,
-                onAnswer: callViewModel.answerCall,
-                onEnd: callViewModel.endCall
+                onAnswer: { callViewModel.send(.answer) },
+                onEnd: { callViewModel.send(.endCall) }
             )
         }
     }

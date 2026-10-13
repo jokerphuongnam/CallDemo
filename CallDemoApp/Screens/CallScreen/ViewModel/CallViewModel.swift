@@ -1,13 +1,24 @@
 import Foundation
 import Observation
+import ScreenViewModel
+
+enum CallAction: ScreenAction {
+    case refreshSettings
+    case startCall
+    case receiveCall
+    case answer
+    case remoteAnswer
+    case endCall
+    case socketReady(UUID, SignalingRole)
+    case socketFailed(String)
+    case webrtcConnected(UUID)
+}
 
 @MainActor
 @Observable
-final class CallViewModel {
+final class CallViewModel: ScreenModel<CallAction> {
     private let useCase: CallUseCaseProtocol
     private let logger: AppLoggerProtocol
-    @ObservationIgnored @CancellableCancelBag private var callProgressCancelBag = CancelBag()
-    @ObservationIgnored @CancellableCancelBag private var signalingCancelBag = CancelBag()
 
     var activeCall: ActiveCall?
     private(set) var hasCurrentUserID = false
@@ -26,7 +37,8 @@ final class CallViewModel {
     init(useCase: CallUseCaseProtocol, logger: AppLoggerProtocol) {
         self.useCase = useCase
         self.logger = logger
-        refreshSettings()
+        super.init()
+        send(.refreshSettings)
     }
 
     var statusText: String {
@@ -34,7 +46,34 @@ final class CallViewModel {
         return activeCall == nil ? "Sẵn sàng với ID: \(displayUserID)" : "Đang có cuộc gọi"
     }
 
-    func refreshSettings() {
+    override func observable(action: CallAction, cancel: Cancel) -> Effect<CallAction> {
+        switch action {
+        case .refreshSettings:
+            return refreshSettings(cancel: cancel)
+        case .startCall:
+            return startCall()
+        case .receiveCall:
+            return receiveCall()
+        case .answer:
+            return answer()
+        case .remoteAnswer:
+            return remoteAnswer()
+        case .endCall:
+            return endCall(cancel: cancel)
+        case .socketReady(let callID, let role):
+            markSocketAuthenticated(callID: callID, role: role)
+            return .none
+        case .socketFailed(let error):
+            logger.info("[Signaling] Preparation or WebSocket connection failed: \(error)")
+            activeCall = nil
+            return .none
+        case .webrtcConnected(let callID):
+            markWebRTCConnected(callID: callID)
+            return .none
+        }
+    }
+
+    private func refreshSettings(cancel: Cancel) -> Effect<CallAction> {
         let previousDisplayUserID = displayUserID
         let previousPartnerDisplayUserID = partnerDisplayUserID
         hasCurrentUserID = useCase.hasCurrentUserID
@@ -46,17 +85,18 @@ final class CallViewModel {
             previousDisplayUserID != displayUserID
             || previousPartnerDisplayUserID != partnerDisplayUserID
         if didChangeIdentity {
-            signalingCancelBag.reset()
+            cancel("signaling")
             useCase.disconnectSignaling()
         }
         logger.info("[Call] Settings refreshed")
+        return .none
     }
 
-    func startCall() {
+    private func startCall() -> Effect<CallAction> {
         logger.info("[Call] Start call tapped")
         guard canUseCallActions else {
             logger.info("[Call] Start call rejected: missing current or partner ID")
-            return
+            return .none
         }
         activeCall = useCase.startOutgoingCall()
         logger.info(
@@ -64,46 +104,37 @@ final class CallViewModel {
                 ? "[Call] Start call rejected: missing current or partner ID"
                 : "[Call] Outgoing call created"
         )
-
-        guard let callID = activeCall?.id else { return }
-        prepareAndJoinSignaling(
-            role: .caller,
-            callID: callID
-        )
+        guard let callID = activeCall?.id else { return .none }
+        return signalingTask(role: .caller, callID: callID)
     }
 
-    func receiveCall() {
+    private func receiveCall() -> Effect<CallAction> {
         logger.info("[Call] Receive call tapped")
         guard canReceiveCall else {
             logger.info("[Call] Incoming call rejected: missing current ID")
-            return
+            return .none
         }
         let peerName = partnerDisplayUserID.isEmpty ? "Partner" : partnerDisplayUserID
         activeCall = useCase.makeIncomingCall(from: peerName)
-
         guard let callID = activeCall?.id else {
             logger.info("[Call] Incoming call rejected: missing current ID")
-            return
+            return .none
         }
-
-        prepareAndJoinSignaling(
-            role: .callee,
-            callID: callID
-        )
+        return signalingTask(role: .callee, callID: callID)
     }
 
-    func answerCall() {
+    private func answer() -> Effect<CallAction> {
         logger.info("[Call] Answer tapped")
         guard let activeCall else {
             logger.info("[Call] Answer ignored: no active call")
-            return
+            return .none
         }
         self.activeCall = useCase.answer(activeCall)
         logger.info("[Call] WebRTC connection started")
-        scheduleWebRTCConnected(callID: activeCall.id)
+        return webrtcTask(callID: activeCall.id)
     }
 
-    func handleRemoteAnswer() {
+    private func remoteAnswer() -> Effect<CallAction> {
         logger.info("[Call] Remote answer event received")
         guard
             let activeCall,
@@ -111,60 +142,47 @@ final class CallViewModel {
             activeCall.phase == .ringing
         else {
             logger.info("[Call] Remote answer ignored: outgoing call is not ringing")
-            return
+            return .none
         }
-
         self.activeCall?.phase = .connecting
-        scheduleWebRTCConnected(callID: activeCall.id)
+        return webrtcTask(callID: activeCall.id)
     }
 
-    func endCall() {
+    private func endCall(cancel: Cancel) -> Effect<CallAction> {
         logger.info("[Call] End call tapped")
-        callProgressCancelBag.reset()
-        signalingCancelBag.reset()
+        cancel("signaling")
+        cancel("webrtc")
         useCase.disconnectSignaling()
         useCase.endCall()
         activeCall = nil
         logger.info("[Call] Active call cleared; call screen will dismiss")
+        return .none
     }
 
-    private func prepareAndJoinSignaling(
-        role: SignalingRole,
-        callID: UUID
-    ) {
+    private func signalingTask(role: SignalingRole, callID: UUID) -> Effect<CallAction> {
         let useCase = useCase
-        let logger = logger
         logger.info("[Signaling] Preparing connection information for \(role)")
-        Task { [weak self] in
+        return .task(.userInitiated, id: "signaling") { send in
             do {
                 try await useCase.joinSignaling(as: role)
                 guard !Task.isCancelled else { return }
-                guard let self else { return }
-                markSocketAuthenticated(callID: callID, role: role)
+                send(.socketReady(callID, role))
             } catch {
                 guard !Task.isCancelled else { return }
-                guard let self else { return }
-                logger.info("[Signaling] Preparation or WebSocket connection failed: \(error)")
-                activeCall = nil
+                send(.socketFailed(String(describing: error)))
             }
         }
-        .store(signalingCancelBag)
     }
 
-    private func scheduleWebRTCConnected(callID: UUID) {
-        Task { [weak self] in
+    private func webrtcTask(callID: UUID) -> Effect<CallAction> {
+        .task(.userInitiated, id: "webrtc") { send in
             try? await Task.sleep(for: .seconds(2))
             guard !Task.isCancelled else { return }
-            guard let self else { return }
-            markWebRTCConnected(callID: callID)
+            send(.webrtcConnected(callID))
         }
-        .store(callProgressCancelBag)
     }
 
-    private func markSocketAuthenticated(
-        callID: UUID,
-        role: SignalingRole
-    ) {
+    private func markSocketAuthenticated(callID: UUID, role: SignalingRole) {
         guard activeCall?.id == callID else { return }
         if role == .caller {
             activeCall?.phase = .waitingForCallee

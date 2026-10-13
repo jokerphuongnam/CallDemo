@@ -45,7 +45,7 @@ struct SettingsView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        viewModel.save()
+                        viewModel.send(.save)
                         dismiss()
                     }
                     .accessibilityIdentifier("settings.saveButton")

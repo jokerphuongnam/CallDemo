@@ -1,8 +1,13 @@
 import Observation
+import ScreenViewModel
+
+enum SettingsAction: ScreenAction {
+    case save
+}
 
 @MainActor
 @Observable
-final class SettingsViewModel {
+final class SettingsViewModel: ScreenModel<SettingsAction> {
     private let useCase: SettingsUseCaseProtocol
     private let logger: AppLoggerProtocol
 
@@ -12,6 +17,7 @@ final class SettingsViewModel {
     init(useCase: SettingsUseCaseProtocol, logger: AppLoggerProtocol) {
         self.useCase = useCase
         self.logger = logger
+        super.init()
         let settings = useCase.loadSettings()
         currentUserID = settings.currentUserID
         partnerUserID = settings.partnerUserID
@@ -31,11 +37,15 @@ final class SettingsViewModel {
             : useCase.signalingIDPreview(for: partnerUserID)
     }
 
-    func save() {
-        logger.info("[Settings] Save tapped")
-        useCase.saveSettings(
-            UserSettings(currentUserID: currentUserID, partnerUserID: partnerUserID)
-        )
-        logger.info("[Settings] Settings saved; partner configured: \(!partnerUserID.isEmpty)")
+    override func observable(action: SettingsAction, cancel _: Cancel) -> Effect<SettingsAction> {
+        switch action {
+        case .save:
+            logger.info("[Settings] Save tapped")
+            useCase.saveSettings(
+                UserSettings(currentUserID: currentUserID, partnerUserID: partnerUserID)
+            )
+            logger.info("[Settings] Settings saved; partner configured: \(!partnerUserID.isEmpty)")
+            return .none
+        }
     }
 }

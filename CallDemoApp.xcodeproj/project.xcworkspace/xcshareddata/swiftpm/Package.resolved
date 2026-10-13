@@ -1,5 +1,5 @@
 {
-  "originHash" : "96b9c8c30da77fa2a52e5e00c23b54531ca8af6ea6afa0f227f5c38ff8516ed0",
+  "originHash" : "1a25499c1542dcba0599b12399ae19ad111734aa4701c42f83083d56067e30ab",
   "pins" : [
     {
       "identity" : "aexml",
@@ -74,6 +74,15 @@
       }
     },
     {
+      "identity" : "screenviewmodel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jokerphuongnam/ScreenViewModel",
+      "state" : {
+        "revision" : "f123638eb41398b626952d5db79f1fd99fcbca56",
+        "version" : "1.5.1"
+      }
+    },
+    {
       "identity" : "spectre",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kylef/Spectre.git",
@@ -107,6 +116,15 @@
       "state" : {
         "revision" : "e9c34fd54ece006b491a0e6d23fe9a6024b9a828",
         "version" : "1.7.0"
+      }
+    },
+    {
+      "identity" : "swift-issue-reporting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-issue-reporting",
+      "state" : {
+        "revision" : "75b000cea2ca6d7527a57e1b9cc0bdf21a9abe9f",
+        "version" : "2.1.1"
       }
     },
     {

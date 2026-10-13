@@ -66,6 +66,7 @@
 		F1000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* DefaultSignalingWebSocketNetworkImpl.swift */; };
 		F10000000000000000000020 /* Blake2 in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000001 /* Blake2 */; };
 		F10000000000000000000021 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000002 /* NetworkManager */; };
+		F10000000000000000000028 /* ScreenViewModel in Frameworks */ = {isa = PBXBuildFile; productRef = F50000000000000000000003 /* ScreenViewModel */; };
 		F10000000000000000000022 /* NetworkManagerCredentialNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* NetworkManagerCredentialNetworkProtocol.swift */; };
 		F10000000000000000000023 /* NetworkManagerNodeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000010 /* NetworkManagerNodeNetworkProtocol.swift */; };
 		F10000000000000000000025 /* UITestSignalingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* UITestSignalingRepositoryImpl.swift */; };
@@ -226,6 +227,7 @@
 			files = (
 				F10000000000000000000020 /* Blake2 in Frameworks */,
 				F10000000000000000000021 /* NetworkManager in Frameworks */,
+				F10000000000000000000028 /* ScreenViewModel in Frameworks */,
 				A5DC69632FFC2D4BC9BF52DD /* Swinject in Frameworks */,
 				B5662B88C6D5D001CDF58661 /* SwinjectAutoregistration in Frameworks */,
 			);
@@ -807,6 +809,7 @@
 			packageProductDependencies = (
 				F50000000000000000000001 /* Blake2 */,
 				F50000000000000000000002 /* NetworkManager */,
+				F50000000000000000000003 /* ScreenViewModel */,
 				76435CAB8F8C75EC8EAF60E5 /* Swinject */,
 				218F0910D4F9435A442648B4 /* SwinjectAutoregistration */,
 			);
@@ -864,6 +867,7 @@
 				V90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				F40000000000000000000001 /* XCRemoteSwiftPackageReference "Blake2.swift" */,
 				F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */,
+				F40000000000000000000003 /* XCRemoteSwiftPackageReference "ScreenViewModel" */,
 				A1E409D59292D89CE15F87A7 /* XCRemoteSwiftPackageReference "Swinject" */,
 				5B221DF34BD4402F2914C706 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
@@ -1358,6 +1362,14 @@
 				minimumVersion = 0.4.0;
 			};
 		};
+		F40000000000000000000003 /* XCRemoteSwiftPackageReference "ScreenViewModel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jokerphuongnam/ScreenViewModel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
 		U90000000000000000000002 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
@@ -1412,6 +1424,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F40000000000000000000002 /* XCRemoteSwiftPackageReference "NetworkManager" */;
 			productName = NetworkManager;
+		};
+		F50000000000000000000003 /* ScreenViewModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40000000000000000000003 /* XCRemoteSwiftPackageReference "ScreenViewModel" */;
+			productName = ScreenViewModel;
 		};
 		U90000000000000000000001 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
